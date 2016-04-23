@@ -34,6 +34,9 @@ indegree, outdegree, degree, degree_histogram, density, Δ, δ,
 Δout, Δin, δout, δin, neighbors, in_neighbors, out_neighbors,
 common_neighbors, all_neighbors, has_self_loop, rem_vertex!,
 
+# maps
+EdgeMap,
+
 # distance
 eccentricity, diameter, periphery, radius, center,
 
@@ -135,6 +138,7 @@ include("core.jl")
     include("digraph.jl")
     include("graph.jl")
         include("edgeiter.jl")
+        include("edgemap.jl")
         include("traversals/graphvisit.jl")
             include("traversals/bfs.jl")
             include("traversals/dfs.jl")
