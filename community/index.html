@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Carlo Lucibello">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Community Structures - FatGraphs.jl</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../assets/Documenter.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Community Structures";
+    var mkdocs_page_input_path = "community.md";
+    var mkdocs_page_url = "/community/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> FatGraphs.jl</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../factory/">Graph Types</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../core/">Basic Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../operators/">Operators</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../traversals/">Traversals</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../distance/">Distance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../shortestpaths/">Shortest Paths</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../linalg/">Linear Algebra</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../persistence/">Reading / Writing Graphs</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../generators/">Graph Generators</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../centrality/">Centrality Measures</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Community Structures</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#community-structures">Community Structures</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../flow/">Flow and Cut</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../matching/">Matching</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../spanningtrees/">Spanning Trees</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../integration/">Integration with other packages</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../contributing/">Contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../license/">License Information</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">FatGraphs.jl</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Community Structures</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/CarloLucibello/FatGraphs.jl/edit/master/docs/community.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><a id='Community-Structures-1'></a></p>
+<h1 id="community-structures">Community Structures</h1>
+<p><em>FatGraphs.jl</em> contains many algorithm to detect and analyze community structures in graphs.</p>
+<p><a id='FatGraphs.global_clustering_coefficient-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.global_clustering_coefficient-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>FatGraphs.global_clustering_coefficient</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>global_clustering_coefficient(g)
+</code></pre>
+
+<p>Computes the <a href="https://en.wikipedia.org/wiki/Clustering_coefficient">global clustering coefficient</a>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/clustering.jl#L75-L79' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.local_clustering' href='#FatGraphs.local_clustering'>#</a>
+<strong><code>FatGraphs.local_clustering</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>local_clustering(g, vlist = vertices(g))
+</code></pre>
+
+<p>Returns two vectors, respectively containing  the first and second result of <code>local_clustering_coefficients(g, v)</code> for each <code>v</code> in <code>vlist</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/clustering.jl#L50-L55' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.local_clustering-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer}' href='#FatGraphs.local_clustering-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer}'>#</a>
+<strong><code>FatGraphs.local_clustering</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>local_clustering(g, v)
+</code></pre>
+
+<p>Returns a tuple <code>(a,b)</code>, where <code>a</code> is the number of triangles in the neighborhood of <code>v</code> and <code>b</code> is the maximum number of possible triangles. It is related to the local clustering coefficient  by <code>r=a/b</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/clustering.jl#L12-L18' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.local_clustering_coefficient' href='#FatGraphs.local_clustering_coefficient'>#</a>
+<strong><code>FatGraphs.local_clustering_coefficient</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>local_clustering_coefficient(g, vlist = vertices(g))
+</code></pre>
+
+<p>Returns a vector containing  the <a href="https://en.wikipedia.org/wiki/Clustering_coefficient">local clustering coefficients</a> for vertices <code>vlist</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/clustering.jl#L43-L47' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.local_clustering_coefficient-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer}' href='#FatGraphs.local_clustering_coefficient-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer}'>#</a>
+<strong><code>FatGraphs.local_clustering_coefficient</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>local_clustering_coefficient(g, v)
+</code></pre>
+
+<p>Computes the <a href="https://en.wikipedia.org/wiki/Clustering_coefficient">local clustering coefficient</a> for node <code>v</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/clustering.jl#L1-L5' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.triangles' href='#FatGraphs.triangles'>#</a>
+<strong><code>FatGraphs.triangles</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>triangles(g, vlist = vertices(g))
+</code></pre>
+
+<p>Returns a vector containing the number of triangles for vertices <code>vlist</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/clustering.jl#L67-L71' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.triangles-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer}' href='#FatGraphs.triangles-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer}'>#</a>
+<strong><code>FatGraphs.triangles</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>triangles(g, v)
+</code></pre>
+
+<p>Returns the number of triangles in the neighborhood for node <code>v</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/clustering.jl#L35-L39' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.core_periphery_deg-Tuple{FatGraphs.AGraph}' href='#FatGraphs.core_periphery_deg-Tuple{FatGraphs.AGraph}'>#</a>
+<strong><code>FatGraphs.core_periphery_deg</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>core_periphery_deg(g)
+</code></pre>
+
+<p>A simple degree-based core-periphery detection algorithm (see <a href="http://arxiv.org/abs/1102.5511">Lip</a>). Returns the vertex assignments (1 for core and 2 for periphery).</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/core-periphery.jl#L1-L6' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.modularity-Tuple{FatGraphs.AGraph,Any}' href='#FatGraphs.modularity-Tuple{FatGraphs.AGraph,Any}'>#</a>
+<strong><code>FatGraphs.modularity</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>modularity(g, c)
+</code></pre>
+
+<p>Computes Newman's modularity <code>Q</code> for graph <code>g</code> given the partitioning <code>c</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/modularity.jl#L1-L6' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.maximal_cliques-Tuple{FatGraphs.AGraph}' href='#FatGraphs.maximal_cliques-Tuple{FatGraphs.AGraph}'>#</a>
+<strong><code>FatGraphs.maximal_cliques</code></strong> &mdash; <em>Method</em>.</p>
+<p>Finds all maximal cliques of an undirected graph.</p>
+<pre><code>julia&gt; using FatGraphs
+julia&gt; g = Graph(3)
+julia&gt; add_edge!(g, 1, 2)
+julia&gt; add_edge!(g, 2, 3)
+julia&gt; maximal_cliques(g)
+2-element Array{Array{Int64,N},1}:
+ [2,3]
+ [2,1]
+</code></pre>
+
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/cliques.jl#L8-L21' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.community_detection_bethe' href='#FatGraphs.community_detection_bethe'>#</a>
+<strong><code>FatGraphs.community_detection_bethe</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>community_detection_bethe(g::AGraph, k=-1; kmax=15)
+</code></pre>
+
+<p>Community detection using the spectral properties of the Bethe Hessian matrix associated to <code>g</code> (see <a href="http://papers.nips.cc/paper/5520-spectral-clustering-of-graphs-with-the-bethe-hessian">Saade et al.</a>). <code>k</code> is the number of community to detect. If omitted or if <code>k&lt;1</code> the optimal number of communities will be automatically selected. In this case the maximum number of detectable communities is given by <code>kmax</code>. Returns a vector containing the vertex assignments.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/detection.jl#L64-L73' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.community_detection_nback-Tuple{FatGraphs.AGraph,Int64}' href='#FatGraphs.community_detection_nback-Tuple{FatGraphs.AGraph,Int64}'>#</a>
+<strong><code>FatGraphs.community_detection_nback</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>community_detection_nback(g::AGraph, k::Int)
+</code></pre>
+
+<p>Community detection using the spectral properties of the non-backtracking matrix of <code>g</code> (see <a href="http://www.pnas.org/content/110/52/20935.short">Krzakala et al.</a>).</p>
+<p><code>g</code>: imput Graph <code>k</code>: number of communities to detect</p>
+<p>return : array containing vertex assignments</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/detection.jl#L1-L11' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.label_propagation-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.label_propagation-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>FatGraphs.label_propagation</code></strong> &mdash; <em>Method</em>.</p>
+<p>Community detection using the label propagation algorithm (see <a href="http://arxiv.org/abs/0709.2938">Raghavan et al.</a>). <code>g</code>: input Graph <code>maxiter</code>: maximum number of iterations return : vertex assignments and the convergence history</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/detection.jl#L92-L97' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.nonbacktrack_embedding-Tuple{FatGraphs.AGraph,Int64}' href='#FatGraphs.nonbacktrack_embedding-Tuple{FatGraphs.AGraph,Int64}'>#</a>
+<strong><code>FatGraphs.nonbacktrack_embedding</code></strong> &mdash; <em>Method</em>.</p>
+<p>Spectral embedding of the non-backtracking matrix of <code>g</code> (see <a href="http://www.pnas.org/content/110/52/20935.short">Krzakala et al.</a>).</p>
+<p><code>g</code>: imput Graph <code>k</code>: number of dimensions in which to embed</p>
+<p>return : a matrix ϕ where ϕ[:,i] are the coordinates for vertex i.</p>
+<p>Note does not explicitly construct the <code>non_backtracking_matrix</code>. See <code>Nonbacktracking</code> for details.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/f4b320eb5c17841efb05498e215d6e9113a2a36d/docs/../src/community/detection.jl#L35-L47' class='documenter-source'>source</a><br></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../flow/" class="btn btn-neutral float-right" title="Flow and Cut">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../centrality/" class="btn btn-neutral" title="Centrality Measures"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/CarloLucibello/FatGraphs.jl/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../centrality/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../flow/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="../assets/mathjaxhelper.js"></script>
+
+</body>
+</html>
