@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Carlo Lucibello">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Operators - FatGraphs.jl</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../assets/Documenter.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Operators";
+    var mkdocs_page_input_path = "operators.md";
+    var mkdocs_page_url = "/operators/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> FatGraphs.jl</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../factory/">Graph Types</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../core/">Basic Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Operators</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#operators">Operators</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../traversals/">Traversals</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../distance/">Distance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../shortestpaths/">Shortest Paths</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../linalg/">Linear Algebra</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../persistence/">Reading / Writing Graphs</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../generators/">Graph Generators</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../centrality/">Centrality Measures</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../community/">Community Structures</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../flow/">Flow and Cut</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../matching/">Matching</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../spanningtrees/">Spanning Trees</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../integration/">Integration with other packages</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../contributing/">Contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../license/">License Information</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">FatGraphs.jl</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Operators</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/CarloLucibello/FatGraphs.jl/edit/master/docs/operators.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><a id='Operators-1'></a></p>
+<h1 id="operators">Operators</h1>
+<p><em>FatGraphs.jl</em> implements the following graph operators:</p>
+<ul>
+<li><a href="./#Base.SparseArrays.blkdiag-Tuple{T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>Base.SparseArrays.blkdiag</code></a></li>
+<li><a href="./#Base.intersect-Tuple{T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>Base.intersect</code></a></li>
+<li><a href="./#Base.join-Tuple{FatGraphs.AGraph,FatGraphs.AGraph}"><code>Base.join</code></a></li>
+<li><a href="./#Base.union-Tuple{T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>Base.union</code></a></li>
+<li><a href="./#FatGraphs.cartesian_product-Tuple{G&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>FatGraphs.cartesian_product</code></a></li>
+<li><a href="./#FatGraphs.complement-Tuple{T&lt;:FatGraphs.AGraph}"><code>FatGraphs.complement</code></a></li>
+<li><a href="./#FatGraphs.complete-Tuple{FatGraphs.ADiGraph}"><code>FatGraphs.complete</code></a></li>
+<li><a href="./#FatGraphs.complete!-Tuple{FatGraphs.ADiGraph}"><code>FatGraphs.complete!</code></a></li>
+<li><a href="./#FatGraphs.crosspath-Tuple{Integer,G&lt;:FatGraphs.AGraph}"><code>FatGraphs.crosspath</code></a></li>
+<li><a href="./#FatGraphs.difference-Tuple{T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>FatGraphs.difference</code></a></li>
+<li><a href="./#FatGraphs.egonet-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}"><code>FatGraphs.egonet</code></a></li>
+<li><a href="./#FatGraphs.subgraph-Tuple{T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{Int64,1}}"><code>FatGraphs.subgraph</code></a></li>
+<li><a href="./#FatGraphs.symmetric_difference-Tuple{T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>FatGraphs.symmetric_difference</code></a></li>
+<li><a href="./#FatGraphs.tensor_product-Tuple{G&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>FatGraphs.tensor_product</code></a></li>
+</ul>
+<p><a id='Base.SparseArrays.blkdiag-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#Base.SparseArrays.blkdiag-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>Base.SparseArrays.blkdiag</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>blkdiag(g, h)
+</code></pre>
+
+<p>Produces a graph with $|V(g)| + |V(h)|$ vertices and $|E(g)| + |E(h)|$ edges.</p>
+<p>Put simply, the vertices and edges from graph <code>h</code> are appended to graph <code>g</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L88-L95' class='documenter-source'>source</a><br></p>
+<p><a id='Base.intersect-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#Base.intersect-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>Base.intersect</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>intersect(g, h)
+</code></pre>
+
+<p>Produces a graph with edges that are only in both graph <code>g</code> and graph <code>h</code>.</p>
+<p>Note that this function may produce a graph with 0-degree vertices.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L108-L114' class='documenter-source'>source</a><br></p>
+<p><a id='Base.join-Tuple{FatGraphs.AGraph,FatGraphs.AGraph}' href='#Base.join-Tuple{FatGraphs.AGraph,FatGraphs.AGraph}'>#</a>
+<strong><code>Base.join</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>join(g, h)
+</code></pre>
+
+<p>Merges graphs <code>g</code> and <code>h</code> using <code>blkdiag</code> and then adds all the edges between  the vertices in <code>g</code> and those in <code>h</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L166-L171' class='documenter-source'>source</a><br></p>
+<p><a id='Base.union-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#Base.union-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>Base.union</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>union(g, h)
+</code></pre>
+
+<p>Merges graphs <code>g</code> and <code>h</code> by taking the set union of all vertices and edges.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L70-L74' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.cartesian_product-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.cartesian_product-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>FatGraphs.cartesian_product</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>cartesian_product(g, h)
+</code></pre>
+
+<p>Returns the (cartesian product)[https://en.wikipedia.org/wiki/Tensor_product_of_graphs] of <code>g</code> and <code>h</code></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L191-L195' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.complement-Tuple{T<:FatGraphs.AGraph}' href='#FatGraphs.complement-Tuple{T<:FatGraphs.AGraph}'>#</a>
+<strong><code>FatGraphs.complement</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>complement(g)
+</code></pre>
+
+<p>Produces the <a href="https://en.wikipedia.org/wiki/Complement_graph">graph complement</a> of a graph.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L38-L43' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.complete!-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.complete!-Tuple{FatGraphs.ADiGraph}'>#</a>
+<strong><code>FatGraphs.complete!</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>complete(g::ADiGraph)
+</code></pre>
+
+<p>Returns a digraph containing both the edges <code>(u,v)</code> of <code>g</code> and their reverse <code>(v,u)</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L13-L18' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.complete-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.complete-Tuple{FatGraphs.ADiGraph}'>#</a>
+<strong><code>FatGraphs.complete</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>complete(g::ADiGraph)
+</code></pre>
+
+<p>Returns a digraph containing both the edges <code>(u,v)</code> of <code>g</code> and their reverse <code>(v,u)</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L1-L6' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.crosspath-Tuple{Integer,G<:FatGraphs.AGraph}' href='#FatGraphs.crosspath-Tuple{Integer,G<:FatGraphs.AGraph}'>#</a>
+<strong><code>FatGraphs.crosspath</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>crosspath(len::Integer, g::AGraph)
+</code></pre>
+
+<p>Replicate <code>len</code> times <code>h</code> and connect each vertex with its copies in a path</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L183-L187' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.difference-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.difference-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>FatGraphs.difference</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>difference(g, h)
+</code></pre>
+
+<p>Produces a graph with edges in graph <code>g</code> that are not in graph <code>h</code>.</p>
+<p>Note that this function may produce a graph with 0-degree vertices.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L126-L132' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.egonet-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}' href='#FatGraphs.egonet-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}'>#</a>
+<strong><code>FatGraphs.egonet</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>egonet(g, v::Int, d::Int; dir=:out)
+</code></pre>
+
+<p>Returns the subgraph of <code>g</code> induced by the neighbors of <code>v</code> up to distance <code>d</code>. If <code>g</code> is a <code>DiGraph</code> the <code>dir</code> optional argument specifies the edge direction the edge direction with respect to <code>v</code> (i.e. <code>:in</code> or <code>:out</code>) to be considered. This is equivalent to <a href="./#FatGraphs.subgraph-Tuple{T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{Int64,1}}"><code>subgraph</code></a><code>(g, neighborhood(g, v, d, dir=dir))[1].</code></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L318-L325' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.subgraph-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{Int64,1}}' href='#FatGraphs.subgraph-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{Int64,1}}'>#</a>
+<strong><code>FatGraphs.subgraph</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>subgraph(g, vlist)
+</code></pre>
+
+<p>Returns the subgraph of <code>g</code> induced by the vertices in  <code>vlist</code>.</p>
+<p>The returned graph has <code>length(vlist)</code> vertices, with the new vertex <code>i</code> corresponding to the vertex of the original graph in the <code>i</code>-th position of <code>vlist</code>.</p>
+<p>Returns  also a vector <code>vmap</code> mapping the new vertices to the old ones: the  vertex <code>i</code> in the subgraph corresponds to the vertex <code>vmap[i]</code> in <code>g</code>.</p>
+<pre><code>subgraph(g, elist)
+</code></pre>
+
+<p>Returns the subgraph of <code>g</code> induced by the edges in <code>elist</code>, along with the associated vector <code>vmap</code> mapping new vertices to the old ones.</p>
+<p><strong>Usage Examples:</strong></p>
+<pre><code class="julia">g = CompleteGraph(10)
+sg, vmap = subgraph(g, 5:8)
+@assert g[5:8] == sg
+@assert nv(sg) == 4
+@assert ne(sg) == 6
+@assert vm[4] == 8
+
+sg, vmap = subgraph(g, [2,8,3,4])
+@asssert sg == g[[2,8,3,4]]
+
+elist = [Edge(1,2), Edge(3,4), Edge(4,8)]
+sg, vmap = subgraph(g, elist)
+@asssert sg == g[elist]
+</code></pre>
+
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L232-L267' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.symmetric_difference-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.symmetric_difference-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>FatGraphs.symmetric_difference</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>symmetric_difference(g, h)
+</code></pre>
+
+<p>Produces a graph with edges from graph <code>g</code> that do not exist in graph <code>h</code>, and vice versa.</p>
+<p>Note that this function may produce a graph with 0-degree vertices.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L144-L151' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.tensor_product-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.tensor_product-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
+<strong><code>FatGraphs.tensor_product</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>tensor_product(g, h)
+</code></pre>
+
+<p>Returns the (tensor product)[https://en.wikipedia.org/wiki/Tensor_product_of_graphs] of <code>g</code> and <code>h</code></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L213-L217' class='documenter-source'>source</a><br></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../traversals/" class="btn btn-neutral float-right" title="Traversals">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../core/" class="btn btn-neutral" title="Basic Interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/CarloLucibello/FatGraphs.jl/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../core/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../traversals/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="../assets/mathjaxhelper.js"></script>
+
+</body>
+</html>
