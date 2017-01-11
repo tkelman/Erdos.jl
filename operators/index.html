@@ -241,6 +241,7 @@
 
 <p>Produces a graph with $|V(g)| + |V(h)|$ vertices and $|E(g)| + |E(h)|$ edges.</p>
 <p>Put simply, the vertices and edges from graph <code>h</code> are appended to graph <code>g</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L88-L95' class='documenter-source'>source</a><br></p>
 <p><a id='Base.intersect-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#Base.intersect-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>Base.intersect</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>intersect(g, h)
@@ -248,48 +249,56 @@
 
 <p>Produces a graph with edges that are only in both graph <code>g</code> and graph <code>h</code>.</p>
 <p>Note that this function may produce a graph with 0-degree vertices.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L108-L114' class='documenter-source'>source</a><br></p>
 <p><a id='Base.join-Tuple{FatGraphs.AGraph,FatGraphs.AGraph}' href='#Base.join-Tuple{FatGraphs.AGraph,FatGraphs.AGraph}'>#</a>
 <strong><code>Base.join</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>join(g, h)
 </code></pre>
 
 <p>Merges graphs <code>g</code> and <code>h</code> using <code>blkdiag</code> and then adds all the edges between  the vertices in <code>g</code> and those in <code>h</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L166-L171' class='documenter-source'>source</a><br></p>
 <p><a id='Base.union-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#Base.union-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>Base.union</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>union(g, h)
 </code></pre>
 
 <p>Merges graphs <code>g</code> and <code>h</code> by taking the set union of all vertices and edges.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L70-L74' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.cartesian_product-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.cartesian_product-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.cartesian_product</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>cartesian_product(g, h)
 </code></pre>
 
 <p>Returns the (cartesian product)[https://en.wikipedia.org/wiki/Tensor_product_of_graphs] of <code>g</code> and <code>h</code></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L191-L195' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.complement-Tuple{T<:FatGraphs.AGraph}' href='#FatGraphs.complement-Tuple{T<:FatGraphs.AGraph}'>#</a>
 <strong><code>FatGraphs.complement</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>complement(g)
 </code></pre>
 
 <p>Produces the <a href="https://en.wikipedia.org/wiki/Complement_graph">graph complement</a> of a graph.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L38-L43' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.complete!-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.complete!-Tuple{FatGraphs.ADiGraph}'>#</a>
 <strong><code>FatGraphs.complete!</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>complete(g::ADiGraph)
 </code></pre>
 
 <p>Returns a digraph containing both the edges <code>(u,v)</code> of <code>g</code> and their reverse <code>(v,u)</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L13-L18' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.complete-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.complete-Tuple{FatGraphs.ADiGraph}'>#</a>
 <strong><code>FatGraphs.complete</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>complete(g::ADiGraph)
 </code></pre>
 
 <p>Returns a digraph containing both the edges <code>(u,v)</code> of <code>g</code> and their reverse <code>(v,u)</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L1-L6' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.crosspath-Tuple{Integer,G<:FatGraphs.AGraph}' href='#FatGraphs.crosspath-Tuple{Integer,G<:FatGraphs.AGraph}'>#</a>
 <strong><code>FatGraphs.crosspath</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>crosspath(len::Integer, g::AGraph)
 </code></pre>
 
 <p>Replicate <code>len</code> times <code>h</code> and connect each vertex with its copies in a path</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L183-L187' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.difference-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.difference-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.difference</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>difference(g, h)
@@ -297,12 +306,14 @@
 
 <p>Produces a graph with edges in graph <code>g</code> that are not in graph <code>h</code>.</p>
 <p>Note that this function may produce a graph with 0-degree vertices.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L126-L132' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.egonet-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}' href='#FatGraphs.egonet-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}'>#</a>
 <strong><code>FatGraphs.egonet</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>egonet(g, v::Int, d::Int; dir=:out)
 </code></pre>
 
 <p>Returns the subgraph of <code>g</code> induced by the neighbors of <code>v</code> up to distance <code>d</code>. If <code>g</code> is a <code>DiGraph</code> the <code>dir</code> optional argument specifies the edge direction the edge direction with respect to <code>v</code> (i.e. <code>:in</code> or <code>:out</code>) to be considered. This is equivalent to <a href="./#FatGraphs.subgraph-Tuple{T&lt;:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{Int64,1}}"><code>subgraph</code></a><code>(g, neighborhood(g, v, d, dir=dir))[1].</code></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L318-L325' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.subgraph-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{Int64,1}}' href='#FatGraphs.subgraph-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{Int64,1}}'>#</a>
 <strong><code>FatGraphs.subgraph</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>subgraph(g, vlist)
@@ -331,6 +342,7 @@ sg, vmap = subgraph(g, elist)
 @asssert sg == g[elist]
 </code></pre>
 
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L232-L267' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.symmetric_difference-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.symmetric_difference-Tuple{T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},T<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.symmetric_difference</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>symmetric_difference(g, h)
@@ -338,12 +350,14 @@ sg, vmap = subgraph(g, elist)
 
 <p>Produces a graph with edges from graph <code>g</code> that do not exist in graph <code>h</code>, and vice versa.</p>
 <p>Note that this function may produce a graph with 0-degree vertices.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L144-L151' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.tensor_product-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.tensor_product-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.tensor_product</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>tensor_product(g, h)
 </code></pre>
 
 <p>Returns the (tensor product)[https://en.wikipedia.org/wiki/Tensor_product_of_graphs] of <code>g</code> and <code>h</code></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/operators/operators.jl#L213-L217' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>

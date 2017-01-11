@@ -227,6 +227,7 @@
 
 <p>Reads a graph from  <code>file</code> in the format <code>t</code>. Returns a graph of type <code>G</code>. Compressed files can eventually be read.</p>
 <p>Supported formats are <code>:gml, :dot, :graphml, :gexf, :NET, :gt</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/persistence/common.jl#L9-L16' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.writegraph-Tuple{IO,Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Symbol}' href='#FatGraphs.writegraph-Tuple{IO,Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Symbol}'>#</a>
 <strong><code>FatGraphs.writegraph</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>writegraph(file, g, t; compress=false)
@@ -235,6 +236,7 @@
 <p>Save a graph <code>g</code> to <code>file</code> in the format <code>t</code>.</p>
 <p>Eventually the resulting file can be compressed in the gzip format.</p>
 <p>Currently supported formats are <code>:gml, :graphml, :gexf, :dot, :NET, :gt</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/persistence/common.jl#L34-L42' class='documenter-source'>source</a><br></p>
 <p><a id='Examples-1'></a></p>
 <h2 id="examples">Examples</h2>
 <pre><code class="julia">writegraph(STDOUT, g)
