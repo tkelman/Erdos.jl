@@ -254,33 +254,35 @@
 <li>color == 0    =&gt; unseen</li>
 <li>color == 1     =&gt; examined</li>
 </ul>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/bfs.jl#L11-L21' class='documenter-source'>source</a><br></p>
-<p><a id='FatGraphs.bfs_tree-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64}' href='#FatGraphs.bfs_tree-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64}'>#</a>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/bfs.jl#L11-L21' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.bfs_tree-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Any}' href='#FatGraphs.bfs_tree-Tuple{G<:Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Any}'>#</a>
 <strong><code>FatGraphs.bfs_tree</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>bfs_tree(g, s)
+</code></pre>
+
 <p>Provides a breadth-first traversal of the graph <code>g</code> starting with source vertex <code>s</code>, and returns a directed acyclic graph of vertices in the order they were discovered.</p>
-<p>This function is a high level wrapper around bfs_tree!, use that function for more performance.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/bfs.jl#L172-L177' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/bfs.jl#L171-L176' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.bipartite_map-Tuple{FatGraphs.AGraph}' href='#FatGraphs.bipartite_map-Tuple{FatGraphs.AGraph}'>#</a>
 <strong><code>FatGraphs.bipartite_map</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>bipartite_map(g)
 </code></pre>
 
 <p>If the graph is bipartite returns a vector <code>c</code>  of size <code>nv(g)</code> containing the assignment of each vertex to one of the two sets (<code>c[i] == 1</code> or <code>c[i]==2</code>). If <code>g</code> is not bipartite returns an empty vector.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/bfs.jl#L253-L259' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/bfs.jl#L252-L258' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.gdistances!-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Any,Any}' href='#FatGraphs.gdistances!-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Any,Any}'>#</a>
 <strong><code>FatGraphs.gdistances!</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>gdistances!(g, source, dists) -&gt; dists
 </code></pre>
 
 <p>Fills <code>dists</code> with the geodesic distances of vertices in  <code>g</code> from vertex/vertices <code>source</code>. <code>dists</code> can be either a vector or a dictionary.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/bfs.jl#L91-L96' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/bfs.jl#L91-L96' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.gdistances-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Any}' href='#FatGraphs.gdistances-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Any}'>#</a>
 <strong><code>FatGraphs.gdistances</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>gdistances(g, source) -&gt; dists
 </code></pre>
 
 <p>Returns a vector filled with the geodesic distances of vertices in  <code>g</code> from vertex/vertices <code>source</code>. For vertices in disconnected components the default distance is -1.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/bfs.jl#L107-L112' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/bfs.jl#L107-L112' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.is_bipartite-Tuple{FatGraphs.AGraph}' href='#FatGraphs.is_bipartite-Tuple{FatGraphs.AGraph}'>#</a>
 <strong><code>FatGraphs.is_bipartite</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>is_bipartite(g)
@@ -288,7 +290,7 @@ is_bipartite(g, v)
 </code></pre>
 
 <p>Will return <code>true</code> if graph <code>g</code> is <a href="https://en.wikipedia.org/wiki/Bipartite_graph">bipartite</a>. If a node <code>v</code> is specified, only the connected component to which it belongs is considered.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/bfs.jl#L223-L229' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/bfs.jl#L222-L228' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.DepthFirst' href='#FatGraphs.DepthFirst'>#</a>
 <strong><code>FatGraphs.DepthFirst</code></strong> &mdash; <em>Type</em>.</p>
 <p><strong>Conventions in Breadth First Search and Depth First Search</strong> VertexColorMap :</p>
@@ -302,25 +304,25 @@ is_bipartite(g, v)
 <li>color == 0    =&gt; unseen</li>
 <li>color == 1     =&gt; examined</li>
 </ul>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/dfs.jl#L12-L22' class='documenter-source'>source</a><br></p>
-<p><a id='FatGraphs.dfs_tree-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64}' href='#FatGraphs.dfs_tree-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64}'>#</a>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/dfs.jl#L12-L22' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.dfs_tree-Tuple{G,Any}' href='#FatGraphs.dfs_tree-Tuple{G,Any}'>#</a>
 <strong><code>FatGraphs.dfs_tree</code></strong> &mdash; <em>Method</em>.</p>
-<pre><code>dfs_tree(g, s::Int)
+<pre><code>dfs_tree(g, s)
 </code></pre>
 
 <p>Provides a depth-first traversal of the graph <code>g</code> starting with source vertex <code>s</code>, and returns a directed acyclic graph of vertices in the order they were discovered.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/dfs.jl#L184-L189' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/dfs.jl#L184-L189' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.is_cyclic-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.is_cyclic-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.is_cyclic</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>is_cyclic(g)
 </code></pre>
 
 <p>Tests whether a graph contains a cycle through depth-first search. It returns <code>true</code> when it finds a cycle, otherwise <code>false</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/dfs.jl#L115-L120' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/dfs.jl#L115-L120' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.maximum_adjacency_visit-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{T,2},Bool,IO}' href='#FatGraphs.maximum_adjacency_visit-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{T,2},Bool,IO}'>#</a>
 <strong><code>FatGraphs.maximum_adjacency_visit</code></strong> &mdash; <em>Method</em>.</p>
 <p>Returns the vertices in <code>g</code> traversed by maximum adjacency search. An optional <code>distmx</code> matrix may be specified; if omitted, edge distances are assumed to be 1. If <code>log</code> (default <code>false</code>) is <code>true</code>, visitor events will be printed to <code>io</code>, which defaults to <code>STDOUT</code>; otherwise, no event information will be displayed.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/maxadjvisit.jl#L207-L213' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/maxadjvisit.jl#L207-L213' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.minimum_cut-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{T,2}}' href='#FatGraphs.minimum_cut-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},AbstractArray{T,2}}'>#</a>
 <strong><code>FatGraphs.minimum_cut</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>minimum_cut(g, dist_matrix=DefaultDistance())
@@ -328,7 +330,7 @@ is_bipartite(g, v)
 
 <p>Finds the <code>cut</code> of minimum total weight.</p>
 <p>Returns a tuple <code>(f, cut, labels)</code>, where <code>f</code> is the weight of the cut, <code>cut</code> is a vector of the edges in the cut, and <code>labels</code> gives a partitioning of the vertices in two sets, according to the cut. An optional <code>dist_matrix</code> matrix maybe specified; if omitted, edge distances are assumed to be 1.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/maxadjvisit.jl#L177-L186' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/maxadjvisit.jl#L177-L186' class='documenter-source'>source</a><br></p>
 <p><a id='Random-walks-1'></a></p>
 <h2 id="random-walks">Random walks</h2>
 <p><em>FatGraphs</em> includes uniform random walks and self avoiding walks:</p>
@@ -338,21 +340,21 @@ is_bipartite(g, v)
 </code></pre>
 
 <p>Performs a non-backtracking random walk on graph <code>g</code> starting at vertex <code>s</code> and continuing for a maximum of <code>niter</code> steps. Returns a vector of vertices visited in order.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/randomwalks.jl#L23-L28' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/randomwalks.jl#L23-L28' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.randomwalk-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer,Integer}' href='#FatGraphs.randomwalk-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer,Integer}'>#</a>
 <strong><code>FatGraphs.randomwalk</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>randomwalk(g, s, niter)
 </code></pre>
 
 <p>Performs a random walk on graph <code>g</code> starting at vertex <code>s</code> and continuing for a maximum of <code>niter</code> steps. Returns a vector of vertices visited in order.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/randomwalks.jl#L1-L6' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/randomwalks.jl#L1-L6' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.self_avoiding_randomwalk-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer,Integer}' href='#FatGraphs.self_avoiding_randomwalk-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Integer,Integer}'>#</a>
 <strong><code>FatGraphs.self_avoiding_randomwalk</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>self_avoiding_randomwalk(g, s, niter)
 </code></pre>
 
 <p>Performs a <a href="https://en.wikipedia.org/wiki/Self-avoiding_walk">self-avoiding walk</a> on graph <code>g</code> starting at vertex <code>s</code> and continuing for a maximum of <code>niter</code> steps. Returns a vector of vertices visited in order.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/randomwalks.jl#L88-L94' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/randomwalks.jl#L88-L94' class='documenter-source'>source</a><br></p>
 <p><a id='Connectivity-/-Bipartiteness-1'></a></p>
 <h2 id="connectivity-bipartiteness">Connectivity / Bipartiteness</h2>
 <p><code>Graph connectivity</code> functions are defined on both undirected and directed graphs:</p>
@@ -362,29 +364,29 @@ is_bipartite(g, v)
 </code></pre>
 
 <p>Returns a vector of vectors of integers representing lists of attracting components in <code>g</code>. The attracting components are a subset of the strongly connected components in which the components do not have any leaving edges.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L261-L267' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L261-L267' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.condensation-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.condensation-Tuple{FatGraphs.ADiGraph}'>#</a>
 <strong><code>FatGraphs.condensation</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>condensation(g::ADiGraph)
 </code></pre>
 
 <p>Returns the condensation graph associated with <code>g</code>. The condensation <code>h</code> of a graph <code>g</code> is the directed graph where every node in <code>h</code> represents a strongly connected component in <code>g</code>, and the presence of an edge between between nodes in <code>h</code> indicates that there is at least one edge between the associated strongly connected components in <code>g</code>. The node numbering in <code>h</code> corresponds to the ordering of the components output from <a href="./#FatGraphs.strongly_connected_components-Tuple{FatGraphs.ADiGraph}"><code>strongly_connected_components</code></a>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L249-L258' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L249-L258' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.connected_components-Tuple{FatGraphs.AGraph}' href='#FatGraphs.connected_components-Tuple{FatGraphs.AGraph}'>#</a>
 <strong><code>FatGraphs.connected_components</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>connected_components(g::AGraph)
 </code></pre>
 
 <p>Returns the <a href="https://en.wikipedia.org/wiki/Connectivity_(graph_theory)">connected components</a> of <code>g</code> as a vector of components, each represented by a vector of vertices belonging to the component.</p>
-<p>See also <a href="../@ref">weakly_connected_components</a> and <a href="../@ref">strongly_connected_components</a> for directed graphs.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L84-L93' class='documenter-source'>source</a><br></p>
+<p>See also <a href="./#FatGraphs.weakly_connected_components-Tuple{FatGraphs.ADiGraph}"><code>weakly_connected_components</code></a> and <a href="./#FatGraphs.strongly_connected_components-Tuple{FatGraphs.ADiGraph}"><code>strongly_connected_components</code></a> for directed graphs.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L84-L93' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.is_connected-Tuple{FatGraphs.AGraph}' href='#FatGraphs.is_connected-Tuple{FatGraphs.AGraph}'>#</a>
 <strong><code>FatGraphs.is_connected</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>is_connected(g)
 </code></pre>
 
 <p>Returns <code>true</code> if <code>g</code> is connected. For DiGraphs, this is equivalent to a test of weak connectivity.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L102-L107' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L102-L107' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.is_strongly_connected-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.is_strongly_connected-Tuple{FatGraphs.ADiGraph}'>#</a>
 <strong><code>FatGraphs.is_strongly_connected</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>is_strongly_connected(g::ADiGraph)
@@ -392,7 +394,7 @@ is_bipartite(g, v)
 
 <p>Returns <code>true</code> if <code>g</code> is strongly connected.</p>
 <p>See also <a href="./#FatGraphs.strongly_connected_components-Tuple{FatGraphs.ADiGraph}"><code>strongly_connected_components</code></a></p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L195-L201' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L195-L201' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.is_weakly_connected-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.is_weakly_connected-Tuple{FatGraphs.ADiGraph}'>#</a>
 <strong><code>FatGraphs.is_weakly_connected</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>is_weakly_connected(g::ADiGraph)
@@ -400,35 +402,35 @@ is_bipartite(g, v)
 
 <p>Returns <code>true</code> if the undirected graph <code>g</code> is weakly connected.</p>
 <p>See also <a href="./#FatGraphs.weakly_connected_components-Tuple{FatGraphs.ADiGraph}"><code>weakly_connected_components</code></a>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L119-L125' class='documenter-source'>source</a><br></p>
-<p><a id='FatGraphs.neighborhood-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}' href='#FatGraphs.neighborhood-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}'>#</a>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L119-L125' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.neighborhood-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Any,Any}' href='#FatGraphs.neighborhood-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Any,Any}'>#</a>
 <strong><code>FatGraphs.neighborhood</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>neighborhood(g, v::Int, d::Int; dir=:out)
 </code></pre>
 
 <p>Returns a vector of the vertices in <code>g</code> at distance less or equal to <code>d</code> from <code>v</code>. If <code>g</code> is a <code>DiGraph</code> the <code>dir</code> optional argument specifies the edge direction the edge direction with respect to <code>v</code> (i.e. <code>:in</code> or <code>:out</code>) to be considered.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L298-L304' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L298-L304' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.period-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.period-Tuple{FatGraphs.ADiGraph}'>#</a>
 <strong><code>FatGraphs.period</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>period(g::ADiGraph)
 </code></pre>
 
 <p>Computes the common period for all nodes in a strongly connected graph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L204-L208' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L204-L208' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.strongly_connected_components-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.strongly_connected_components-Tuple{FatGraphs.ADiGraph}'>#</a>
 <strong><code>FatGraphs.strongly_connected_components</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>strongly_connected_components(g::ADiGraph)
 </code></pre>
 
 <p>Computes the strongly connected components of a directed graph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L172-L176' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L172-L176' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.weakly_connected_components-Tuple{FatGraphs.ADiGraph}' href='#FatGraphs.weakly_connected_components-Tuple{FatGraphs.ADiGraph}'>#</a>
 <strong><code>FatGraphs.weakly_connected_components</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>weakly_connected_components(g::ADiGraph)
 </code></pre>
 
 <p>Returns the weakly connected components of undirected graph <code>g</code>. It is equivalent to the connected components of the corresponding undirected graph, i.e. <code>connected_components(graph(g))</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/traversals/connectivity.jl#L110-L116' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/traversals/connectivity.jl#L110-L116' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>

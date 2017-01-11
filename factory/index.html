@@ -218,43 +218,6 @@
                 <p><a id='Graph-Types-1'></a></p>
 <h1 id="graph-types">Graph Types</h1>
 <p><em>FatGraphs.jl</em> defines the following basic types and functionalities:</p>
-<p><a id='FatGraphs.DiGraph' href='#FatGraphs.DiGraph'>#</a>
-<strong><code>FatGraphs.DiGraph</code></strong> &mdash; <em>Type</em>.</p>
-<pre><code>type DiGraph &lt;: ADiGraph
-    ne::Int
-    fadjlist::Vector{Vector{Int}}
-    badjlist::Vector{Vector{Int}}
-end
-</code></pre>
-
-<p>A simple digraph type based on two adjacency lists (forward and backward).</p>
-<pre><code>DiGraph(n=0)
-</code></pre>
-
-<p>Construct an empty DiGraph with <code>n</code> vertices.</p>
-<pre><code>DiGraph{T&lt;:Real}(adjmx::AbstractMatrix{T})
-</code></pre>
-
-<p>Construct a <code>DiGraph</code> from the adjacency matrix <code>adjmx</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/factory/graphdigraph.jl#L23-L40' class='documenter-source'>source</a><br></p>
-<p><a id='FatGraphs.Graph' href='#FatGraphs.Graph'>#</a>
-<strong><code>FatGraphs.Graph</code></strong> &mdash; <em>Type</em>.</p>
-<pre><code>type Graph &lt;: AGraph
-    ne::Int
-    fadjlist::Vector{Vector{Int}}
-end
-</code></pre>
-
-<p>A simple graph type based on an adjacency list.</p>
-<pre><code>Graph(n=0)
-</code></pre>
-
-<p>Construct an empty Graph with <code>n</code> vertices.</p>
-<pre><code>Graph(adjmx::AbstractMatrix)
-</code></pre>
-
-<p>Construct a <code>Graph</code> from the adjacency matrix <code>adjmx</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/factory/graphdigraph.jl#L1-L17' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>

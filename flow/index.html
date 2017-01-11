@@ -221,19 +221,19 @@
 <p><a id='FatGraphs.BoykovKolmogorovAlgorithm' href='#FatGraphs.BoykovKolmogorovAlgorithm'>#</a>
 <strong><code>FatGraphs.BoykovKolmogorovAlgorithm</code></strong> &mdash; <em>Type</em>.</p>
 <p>Forces the maximum_flow function to use the Boykov-Kolmogorov algorithm.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/maximum_flow.jl#L18-L20' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/maximum_flow.jl#L18-L20' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.DinicAlgorithm' href='#FatGraphs.DinicAlgorithm'>#</a>
 <strong><code>FatGraphs.DinicAlgorithm</code></strong> &mdash; <em>Type</em>.</p>
 <p>Forces the maximum_flow function to use Dinic's algorithm.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/maximum_flow.jl#L12-L14' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/maximum_flow.jl#L12-L14' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.EdmondsKarpAlgorithm' href='#FatGraphs.EdmondsKarpAlgorithm'>#</a>
 <strong><code>FatGraphs.EdmondsKarpAlgorithm</code></strong> &mdash; <em>Type</em>.</p>
 <p>Forces the maximum_flow function to use the Edmonds–Karp algorithm.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/maximum_flow.jl#L6-L8' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/maximum_flow.jl#L6-L8' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.PushRelabelAlgorithm' href='#FatGraphs.PushRelabelAlgorithm'>#</a>
 <strong><code>FatGraphs.PushRelabelAlgorithm</code></strong> &mdash; <em>Type</em>.</p>
 <p>Forces the maximum_flow function to use the Push-Relabel algorithm.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/maximum_flow.jl#L24-L26' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/maximum_flow.jl#L24-L26' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.maximum_flow' href='#FatGraphs.maximum_flow'>#</a>
 <strong><code>FatGraphs.maximum_flow</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>maximum_flow{T&lt;:Number}(
@@ -280,7 +280,7 @@ f, F, labels = maximum_flow(g, 1, 8)
 f, F, labels = maximum_flow(g,1,8,capacity_matrix,algorithm=EdmondsKarpAlgorithm())
 </code></pre>
 
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/maximum_flow.jl#L121-L172' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/maximum_flow.jl#L123-L174' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.minimum_cut-Tuple{Any,Any,Any,Vararg{Any,N}}' href='#FatGraphs.minimum_cut-Tuple{Any,Any,Any,Vararg{Any,N}}'>#</a>
 <strong><code>FatGraphs.minimum_cut</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>minimum_cut(g, s, t, capacity_matrix=DefaultCapacity(); kws...)
@@ -288,15 +288,15 @@ f, F, labels = maximum_flow(g,1,8,capacity_matrix,algorithm=EdmondsKarpAlgorithm
 
 <p>Finds the <code>s-t cut</code> of minimal weight according to the <code>capacities</code> matrix. The solution is found trhough a maximal flow algorithm. See <a href="./#FatGraphs.maximum_flow"><code>maximum_flow</code></a> for the optional arguments.</p>
 <p>Returns a triple <code>(f, cut, labels)</code>, where <code>f</code> is the weight of the cut, <code>cut</code> is a vector of the edges in the cut, and <code>labels</code> gives a partitioning of the vertices in two sets, according to the cut.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/maximum_flow.jl#L221-L231' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/maximum_flow.jl#L223-L233' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.ExtendedMultirouteFlowAlgorithm' href='#FatGraphs.ExtendedMultirouteFlowAlgorithm'>#</a>
 <strong><code>FatGraphs.ExtendedMultirouteFlowAlgorithm</code></strong> &mdash; <em>Type</em>.</p>
 <p>Forces the multiroute_flow function to use the Extended Multiroute Flow algorithm.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/multiroute_flow.jl#L12-L14' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/multiroute_flow.jl#L12-L14' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.KishimotoAlgorithm' href='#FatGraphs.KishimotoAlgorithm'>#</a>
 <strong><code>FatGraphs.KishimotoAlgorithm</code></strong> &mdash; <em>Type</em>.</p>
 <p>Forces the multiroute_flow function to use the Kishimoto algorithm.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/multiroute_flow.jl#L6-L8' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/multiroute_flow.jl#L6-L8' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.multiroute_flow' href='#FatGraphs.multiroute_flow'>#</a>
 <strong><code>FatGraphs.multiroute_flow</code></strong> &mdash; <em>Function</em>.</p>
 <p>The generic multiroute_flow function will output three kinds of results:</p>
@@ -378,7 +378,7 @@ f, F, labels = multiroute_flow(flow_graph, 1, 8, capacity_matrix,
 
 </code></pre>
 
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/fb1ad0f4e04f1bde0ab53e2378f3691ef2ab9087/docs/../src/flow/multiroute_flow.jl#L94-L180' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/flow/multiroute_flow.jl#L94-L180' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
