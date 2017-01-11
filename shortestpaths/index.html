@@ -242,7 +242,6 @@
 </code></pre>
 
 <p>Computes the shortest path between vertices <code>s</code> and <code>t</code> using the <a href="http://en.wikipedia.org/wiki/A%2A_search_algorithm">A* search algorithm</a>. An optional heuristic function and edge distance matrix may be supplied.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/astar.jl#L39-L45' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.bellman_ford_shortest_paths' href='#FatGraphs.bellman_ford_shortest_paths'>#</a>
 <strong><code>FatGraphs.bellman_ford_shortest_paths</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>bellman_ford_shortest_paths(g, s, distmx=DefaultDistance())
@@ -250,7 +249,6 @@ bellman_ford_shortest_paths(g, sources, distmx=DefaultDistance())
 </code></pre>
 
 <p>Uses the <a href="http://en.wikipedia.org/wiki/Bellman–Ford_algorithm">Bellman-Ford algorithm</a> to compute shortest paths of all vertices of a <code>g</code> from a source vertex <code>s</code> (or a set of source vertices <code>sources</code>). Returns a <code>BellmanFordState</code> with relevant traversal information (see below).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/bellman-ford.jl#L57-L65' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.enumerate_paths-Tuple{FatGraphs.AbstractPathState,Any}' href='#FatGraphs.enumerate_paths-Tuple{FatGraphs.AbstractPathState,Any}'>#</a>
 <strong><code>FatGraphs.enumerate_paths</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>enumerate_paths(state::AbstractPathState)
@@ -259,7 +257,6 @@ enumerate_paths(state::AbstractPathState, dest)
 
 <p>Given a path state <code>state</code> of type <code>AbstractPathState</code> (see below), returns a vector (indexed by vertex) of the paths between the source vertex used to compute the path state and a destination vertex <code>v</code>, a set of destination vertices <code>vs</code>, or the entire graph. For multiple destination vertices, each path is represented by a vector of vertices on the path between the source and the destination. Nonexistent paths will be indicated by an empty vector. For single destinations, the path is represented by a single vector of vertices, and will be length 0 if the path does not exist.</p>
 <p>For Floyd-Warshall path states, please note that the output is a bit different, since this algorithm calculates all shortest paths for all pairs of vertices: <code>enumerate_paths(state)</code> will return a vector (indexed by source vertex) of vectors (indexed by destination vertex) of paths. <code>enumerate_paths(state, v)</code> will return a vector (indexed by destination vertex) of paths from source <code>v</code> to all other vertices. In addition, <code>enumerate_paths(state, v, d)</code> will return a vector representing the path from vertex <code>v</code> to vertex <code>d</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/bellman-ford.jl#L112-L132' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.dijkstra_shortest_paths' href='#FatGraphs.dijkstra_shortest_paths'>#</a>
 <strong><code>FatGraphs.dijkstra_shortest_paths</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>dijkstra_shortest_paths(g, s, distmx=DefaultDistance(); allpaths=false)
@@ -268,7 +265,6 @@ dijkstra_shortest_paths(g, sources, distmx=DefaultDistance(); allpaths=false)
 
 <p>Performs <a href="http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's algorithm</a> on a graph, computing shortest distances between a source vertex <code>s</code> (or a vector <code>sources</code>)  and all other veritces. Returns a <code>DijkstraState</code> that contains various traversal information.</p>
 <p>With <code>allpaths=true</code>, returns a <code>DijkstraState</code> that keeps track of all predecessors of a given vertex.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/dijkstra.jl#L17-L28' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.floyd_warshall_shortest_paths' href='#FatGraphs.floyd_warshall_shortest_paths'>#</a>
 <strong><code>FatGraphs.floyd_warshall_shortest_paths</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>floyd_warshall_shortest_paths(g, distmx=DefaultDistance())
@@ -276,7 +272,6 @@ dijkstra_shortest_paths(g, sources, distmx=DefaultDistance(); allpaths=false)
 
 <p>Uses the <a href="http://en.wikipedia.org/wiki/Floyd–Warshall_algorithm">Floyd-Warshall algorithm</a> to compute shortest paths between all pairs of vertices in graph <code>g</code>. Returns a <code>FloydWarshallState</code> with relevant traversal information, each is a vertex-indexed vector of vectors containing the metric for each vertex in the graph.</p>
 <p>Note that this algorithm may return a large amount of data (it will allocate on the order of $O(nv^2)$).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/floyd-warshall.jl#L10-L21' class='documenter-source'>source</a><br></p>
 <p>–-&gt;</p>
 <p><a id='FatGraphs.a_star' href='#FatGraphs.a_star'>#</a>
 <strong><code>FatGraphs.a_star</code></strong> &mdash; <em>Function</em>.</p>
@@ -284,7 +279,6 @@ dijkstra_shortest_paths(g, sources, distmx=DefaultDistance(); allpaths=false)
 </code></pre>
 
 <p>Computes the shortest path between vertices <code>s</code> and <code>t</code> using the <a href="http://en.wikipedia.org/wiki/A%2A_search_algorithm">A* search algorithm</a>. An optional heuristic function and edge distance matrix may be supplied.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/astar.jl#L39-L45' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.dijkstra_shortest_paths' href='#FatGraphs.dijkstra_shortest_paths'>#</a>
 <strong><code>FatGraphs.dijkstra_shortest_paths</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>dijkstra_shortest_paths(g, s, distmx=DefaultDistance(); allpaths=false)
@@ -293,7 +287,6 @@ dijkstra_shortest_paths(g, sources, distmx=DefaultDistance(); allpaths=false)
 
 <p>Performs <a href="http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's algorithm</a> on a graph, computing shortest distances between a source vertex <code>s</code> (or a vector <code>sources</code>)  and all other veritces. Returns a <code>DijkstraState</code> that contains various traversal information.</p>
 <p>With <code>allpaths=true</code>, returns a <code>DijkstraState</code> that keeps track of all predecessors of a given vertex.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/dijkstra.jl#L17-L28' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.bellman_ford_shortest_paths' href='#FatGraphs.bellman_ford_shortest_paths'>#</a>
 <strong><code>FatGraphs.bellman_ford_shortest_paths</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>bellman_ford_shortest_paths(g, s, distmx=DefaultDistance())
@@ -301,7 +294,6 @@ bellman_ford_shortest_paths(g, sources, distmx=DefaultDistance())
 </code></pre>
 
 <p>Uses the <a href="http://en.wikipedia.org/wiki/Bellman–Ford_algorithm">Bellman-Ford algorithm</a> to compute shortest paths of all vertices of a <code>g</code> from a source vertex <code>s</code> (or a set of source vertices <code>sources</code>). Returns a <code>BellmanFordState</code> with relevant traversal information (see below).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/bellman-ford.jl#L57-L65' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.floyd_warshall_shortest_paths' href='#FatGraphs.floyd_warshall_shortest_paths'>#</a>
 <strong><code>FatGraphs.floyd_warshall_shortest_paths</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>floyd_warshall_shortest_paths(g, distmx=DefaultDistance())
@@ -309,7 +301,6 @@ bellman_ford_shortest_paths(g, sources, distmx=DefaultDistance())
 
 <p>Uses the <a href="http://en.wikipedia.org/wiki/Floyd–Warshall_algorithm">Floyd-Warshall algorithm</a> to compute shortest paths between all pairs of vertices in graph <code>g</code>. Returns a <code>FloydWarshallState</code> with relevant traversal information, each is a vertex-indexed vector of vectors containing the metric for each vertex in the graph.</p>
 <p>Note that this algorithm may return a large amount of data (it will allocate on the order of $O(nv^2)$).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/floyd-warshall.jl#L10-L21' class='documenter-source'>source</a><br></p>
 <p><a id='Path-discovery-/-enumeration-1'></a></p>
 <h2 id="path-discovery-enumeration">Path discovery / enumeration</h2>
 <p><a id='FatGraphs.enumerate_paths' href='#FatGraphs.enumerate_paths'>#</a>
@@ -320,7 +311,6 @@ enumerate_paths(state::AbstractPathState, dest)
 
 <p>Given a path state <code>state</code> of type <code>AbstractPathState</code> (see below), returns a vector (indexed by vertex) of the paths between the source vertex used to compute the path state and a destination vertex <code>v</code>, a set of destination vertices <code>vs</code>, or the entire graph. For multiple destination vertices, each path is represented by a vector of vertices on the path between the source and the destination. Nonexistent paths will be indicated by an empty vector. For single destinations, the path is represented by a single vector of vertices, and will be length 0 if the path does not exist.</p>
 <p>For Floyd-Warshall path states, please note that the output is a bit different, since this algorithm calculates all shortest paths for all pairs of vertices: <code>enumerate_paths(state)</code> will return a vector (indexed by source vertex) of vectors (indexed by destination vertex) of paths. <code>enumerate_paths(state, v)</code> will return a vector (indexed by destination vertex) of paths from source <code>v</code> to all other vertices. In addition, <code>enumerate_paths(state, v, d)</code> will return a vector representing the path from vertex <code>v</code> to vertex <code>d</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/shortestpaths/bellman-ford.jl#L112-L132' class='documenter-source'>source</a><br></p>
 <p>For Floyd-Warshall path states, please note that the output is a bit different, since this algorithm calculates all shortest paths for all pairs of vertices: <code>enumerate_paths(state)</code> will return a vector (indexed by source vertex) of vectors (indexed by destination vertex) of paths. <code>enumerate_paths(state, v)</code> will return a vector (indexed by destination vertex) of paths from source <code>v</code> to all other vertices. In addition, <code>enumerate_paths(state, v, d)</code> will return a vector representing the path from vertex <code>v</code> to vertex <code>d</code>.</p>
 <p><a id='Path-States-1'></a></p>
 <h2 id="path-states">Path States</h2>

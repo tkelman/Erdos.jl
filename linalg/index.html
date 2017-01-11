@@ -224,11 +224,9 @@
 </code></pre>
 
 <p>Returns a sparse boolean adjacency matrix for a graph, indexed by <code>[u, v]</code> vertices. <code>true</code> values indicate an edge between <code>u</code> and <code>v</code>. Users may specify a direction (<code>:in</code>, <code>:out</code>, or <code>:all</code> are currently supported; <code>:out</code> is default for both directed and undirected graphs) and a data type for the matrix (defaults to <code>Int</code>).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/linalg/spectral.jl#L9-L17' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.adjacency_spectrum' href='#FatGraphs.adjacency_spectrum'>#</a>
 <strong><code>FatGraphs.adjacency_spectrum</code></strong> &mdash; <em>Function</em>.</p>
 <p>Returns the eigenvalues of the adjacency matrix for a graph <code>g</code>, indexed by vertex. Warning: Converts the matrix to dense with $nv^2$ memory usage. Use <code>eigs(adjacency_matrix(g);kwargs...)</code> to compute some of the eigenvalues/eigenvectors. Default values for <code>dir</code> and <code>T</code> are the same as <code>adjacency_matrix</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/linalg/spectral.jl#L89-L95' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.incidence_matrix' href='#FatGraphs.incidence_matrix'>#</a>
 <strong><code>FatGraphs.incidence_matrix</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>incidence_matrix(g::ASimpleGraph, T::DataType=Int; oriented=false)
@@ -236,21 +234,18 @@
 
 <p>Returns a sparse node-arc incidence matrix for a graph, indexed by <code>[v, i]</code>, where <code>i</code> is in <code>1:ne(g)</code>, indexing an edge <code>e</code>. For directed graphs, a value of <code>-1</code> indicates that <code>src(e) == v</code>, while a value of <code>1</code> indicates that <code>dst(e) == v</code>. Otherwise, the value is <code>0</code>.</p>
 <p>For undirected graphs, both entries are <code>1</code> if <code>oriented=false</code>, otherwise <code>[v, i] -&gt; -1</code> and <code>[u, i] -&gt; 1</code> if <code>v &lt; u</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/linalg/spectral.jl#L100-L111' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.laplacian_matrix' href='#FatGraphs.laplacian_matrix'>#</a>
 <strong><code>FatGraphs.laplacian_matrix</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>laplacian_matrix(g, dir::Symbol=:out, T::DataType=Int)
 </code></pre>
 
 <p>Returns a sparse <a href="https://en.wikipedia.org/wiki/Laplacian_matrix">Laplacian matrix</a> for a graph <code>g</code>, indexed by <code>[u, v]</code> vertices. <code>dir</code> has to be <code>:in, :out</code> or <code>:all</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/linalg/spectral.jl#L66-L71' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.laplacian_spectrum' href='#FatGraphs.laplacian_spectrum'>#</a>
 <strong><code>FatGraphs.laplacian_spectrum</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>laplacian_spectrum(g, dir::Symbol=:out, T::DataType=Int)
 </code></pre>
 
 <p>Returns the eigenvalues of the Laplacian matrix for a graph <code>g</code>, indexed by vertex. Warning: Converts the matrix to dense with $nv^2$ memory usage. Use <code>eigs(laplacian_matrix(g);  kwargs...)</code> to compute some of the eigenvalues/eigenvectors. Default values for <code>dir</code> and <code>T</code> are the same as <code>laplacian_matrix</code>. <code>dir</code> has to be <code>:in, :out</code> or <code>:all</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/linalg/spectral.jl#L78-L86' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.spectral_distance-Tuple{FatGraphs.AGraph,FatGraphs.AGraph,Integer}' href='#FatGraphs.spectral_distance-Tuple{FatGraphs.AGraph,FatGraphs.AGraph,Integer}'>#</a>
 <strong><code>FatGraphs.spectral_distance</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>spectral_distance(G₁, G₂ [, k])
@@ -259,7 +254,6 @@
 <p>Compute the spectral distance between undirected n-vertex graphs G₁ and G₂ using the top k ≤ n greatest eigenvalues. If k is ommitted, uses full spectrum.</p>
 <p>For further details, please refer to:</p>
 <p>JOVANOVIC, I.; STANIC, Z., 2014. Spectral Distances of Graphs Based on their Different Matrix Representations</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/bf8868aed3e9d255a46035da6c60ded3c16521b5/docs/../src/linalg/spectral.jl#L139-L150' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
