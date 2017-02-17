@@ -56,7 +56,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../factory/">Graph Types</a>
+        <a class="" href="../types/">Types and Constructors</a>
         
     </li>
 <li>
@@ -64,6 +64,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../core/">Basic Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maps/">Maps</a>
         
     </li>
 <li>
@@ -154,28 +161,14 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../dismantling/">Dismantling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../spanningtrees/">Spanning Trees</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../integration/">Integration with other packages</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../contributing/">Contributing</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../license/">License Information</a>
         
     </li>
 <li>
@@ -221,9 +214,11 @@
 <ul>
 <li><a href="./#FatGraphs.betweenness_centrality"><code>FatGraphs.betweenness_centrality</code></a></li>
 <li><a href="./#FatGraphs.closeness_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>FatGraphs.closeness_centrality</code></a></li>
+<li><a href="./#FatGraphs.cores-Tuple{FatGraphs.AGraph}"><code>FatGraphs.cores</code></a></li>
 <li><a href="./#FatGraphs.degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>FatGraphs.degree_centrality</code></a></li>
 <li><a href="./#FatGraphs.in_degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>FatGraphs.in_degree_centrality</code></a></li>
 <li><a href="./#FatGraphs.katz_centrality"><code>FatGraphs.katz_centrality</code></a></li>
+<li><a href="./#FatGraphs.kcore-Tuple{FatGraphs.AGraph,Integer}"><code>FatGraphs.kcore</code></a></li>
 <li><a href="./#FatGraphs.out_degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}"><code>FatGraphs.out_degree_centrality</code></a></li>
 <li><a href="./#FatGraphs.pagerank"><code>FatGraphs.pagerank</code></a></li>
 </ul>
@@ -241,34 +236,53 @@
 <p>normalize: bool, optional     If true, the betweenness values are normalized by the total number     of possible distinct paths between all pairs in the graphs. For an undirected graph,     this number if <code>((n-1)*(n-2))/2</code> and for a directed graph, <code>(n-1)*(n-2)</code>     where <code>n</code> is the number of nodes in the graph.</p>
 <p>endpoints: bool, optional     If true, endpoints are included in the shortest path count.</p>
 <p><strong>Returns</strong></p>
-<p>betweenness: Array{Float64}     Betweenness centrality value per node id.</p>
+<p>betweenness: Vector{Float64}     Betweenness centrality value per node id.</p>
 <p><strong>References</strong></p>
 <p>[1] Brandes 2001 &amp; Brandes 2008</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/centrality/betweenness.jl#L5-L48' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/betweenness.jl#L5-L48' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.closeness_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.closeness_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.closeness_centrality</code></strong> &mdash; <em>Method</em>.</p>
 <p>Calculates the <a href="https://en.wikipedia.org/wiki/Centrality#Closeness_centrality">closeness centrality</a> of the graph <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/centrality/closeness.jl#L1-L4' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/closeness.jl#L1-L4' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.degree_centrality</code></strong> &mdash; <em>Method</em>.</p>
 <p>Calculates the <a href="https://en.wikipedia.org/wiki/Centrality#Degree_centrality">degree centrality</a> of the graph <code>g</code>, with optional (default) normalization.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/centrality/degree.jl#L19-L21' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/degree.jl#L19-L21' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.in_degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.in_degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.in_degree_centrality</code></strong> &mdash; <em>Method</em>.</p>
 <p>Calculates the <a href="https://en.wikipedia.org/wiki/Centrality#Degree_centrality">degree centrality</a> of the graph <code>g</code>, with optional (default) normalization.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/centrality/degree.jl#L22-L24' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/degree.jl#L22-L24' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.out_degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}' href='#FatGraphs.out_degree_centrality-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph}}'>#</a>
 <strong><code>FatGraphs.out_degree_centrality</code></strong> &mdash; <em>Method</em>.</p>
 <p>Calculates the <a href="https://en.wikipedia.org/wiki/Centrality#Degree_centrality">degree centrality</a> of the graph <code>g</code>, with optional (default) normalization.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/centrality/degree.jl#L25-L27' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/degree.jl#L25-L27' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.katz_centrality' href='#FatGraphs.katz_centrality'>#</a>
 <strong><code>FatGraphs.katz_centrality</code></strong> &mdash; <em>Function</em>.</p>
 <p>Calculates the <a href="https://en.wikipedia.org/wiki/Katz_centrality">Katz centrality</a> of the graph <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/centrality/katz.jl#L24-L27' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/katz.jl#L24-L27' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.pagerank' href='#FatGraphs.pagerank'>#</a>
 <strong><code>FatGraphs.pagerank</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>pagerank(g::ADiGraph, α=0.85, n=100, ϵ = 1.0e-6)
+</code></pre>
+
 <p>Calculates the <a href="https://en.wikipedia.org/wiki/PageRank">PageRank</a> of the graph <code>g</code>. Can optionally specify a different damping factor (<code>α</code>), number of iterations (<code>n</code>), and convergence threshold (<code>ϵ</code>). If convergence is not reached within <code>n</code> iterations, an error will be returned.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/centrality/pagerank.jl#L4-L9' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/pagerank.jl#L4-L11' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.cores-Tuple{FatGraphs.AGraph}' href='#FatGraphs.cores-Tuple{FatGraphs.AGraph}'>#</a>
+<strong><code>FatGraphs.cores</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>cores(g)
+</code></pre>
+
+<p>Returns a vector <code>deg</code> such that if <code>deg[v]=k</code> then the vertex <code>v</code> belongs to the <code>k</code>-core of <code>g</code> and not to the <code>k+1</code>-core.</p>
+<p>See also <a href="./#FatGraphs.kcore-Tuple{FatGraphs.AGraph,Integer}"><code>kcore</code></a>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/kcore.jl#L1-L8' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.kcore-Tuple{FatGraphs.AGraph,Integer}' href='#FatGraphs.kcore-Tuple{FatGraphs.AGraph,Integer}'>#</a>
+<strong><code>FatGraphs.kcore</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>kcore(g, k) -&gt; (gnew, vmap)
+</code></pre>
+
+<p>Returns the <code>k</code>-core  of <code>g</code> along with and vector that associates the new vertices to the old ones.</p>
+<p>See also <a href="./#FatGraphs.cores-Tuple{FatGraphs.AGraph}"><code>cores</code></a></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/centrality/kcore.jl#L62-L69' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>

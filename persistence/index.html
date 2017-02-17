@@ -56,7 +56,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../factory/">Graph Types</a>
+        <a class="" href="../types/">Types and Constructors</a>
         
     </li>
 <li>
@@ -64,6 +64,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../core/">Basic Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maps/">Maps</a>
         
     </li>
 <li>
@@ -156,28 +163,14 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../dismantling/">Dismantling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../spanningtrees/">Spanning Trees</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../integration/">Integration with other packages</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../contributing/">Contributing</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../license/">License Information</a>
         
     </li>
 <li>
@@ -219,24 +212,28 @@
               
                 <p><a id='Reading-and-writing-Graphs-1'></a></p>
 <h1 id="reading-and-writing-graphs">Reading and writing Graphs</h1>
-<p>Graphs may be written to I/O streams and files using the <code>writegraph</code> function and read with the <code>readgraph</code> function. Currently supported common graph formats are <a href="http://en.wikipedia.org/wiki/GraphML">GraphML</a>, <a href="https://en.wikipedia.org/wiki/Graph_Modelling_Language">GML</a>, <a href="http://gexf.net/format">Gexf</a>, <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)">DOT</a>, <a href="http://gephi.org/users/supported-graph-formats/pajek-net-format/">Pajek NET</a>, <a href="https://graph-tool.skewed.de/static/doc/gt_format.html">graph-tool gt</a></p>
+<p>Graphs may be written to I/O streams and files using the <code>writegraph</code> function and read with the <code>readgraph</code> function. Currently supported common graph formats are <a href="http://en.wikipedia.org/wiki/GraphML">GraphML</a>, <a href="https://en.wikipedia.org/wiki/Graph_Modelling_Language">GML</a>, <a href="http://gexf.net/format">Gexf</a>, <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)">DOT</a>, <a href="http://gephi.org/users/supported-graph-formats/pajek-net-format/">Pajek .net</a>, <a href="https://graph-tool.skewed.de/static/doc/gt_format.html">graph-tool gt</a></p>
 <p><a id='FatGraphs.readgraph' href='#FatGraphs.readgraph'>#</a>
 <strong><code>FatGraphs.readgraph</code></strong> &mdash; <em>Function</em>.</p>
-<pre><code>readgraph(file, t, G=Graph; compressed=false)
+<pre><code>readgraph(filename, G=Graph)
+readgraph(filename, t, G=Graph; compressed=false)
 </code></pre>
 
-<p>Reads a graph from  <code>file</code> in the format <code>t</code>. Returns a graph of type <code>G</code>. Compressed files can eventually be read.</p>
-<p>Supported formats are <code>:gml, :dot, :graphml, :gexf, :NET, :gt</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/persistence/common.jl#L9-L16' class='documenter-source'>source</a><br></p>
+<p>Reads a graph from  <code>filename</code> in the format <code>t</code>. Returns a graph of type <code>G</code>. Compressed files can eventually be read.</p>
+<p>Supported formats are <code>:gml, :dot, :graphml, :gexf, :net, :gt</code>.</p>
+<p>If no format is provided, it will be inferred from <code>filename</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/persistence/common.jl#L9-L19' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.writegraph-Tuple{IO,Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Symbol}' href='#FatGraphs.writegraph-Tuple{IO,Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Symbol}'>#</a>
 <strong><code>FatGraphs.writegraph</code></strong> &mdash; <em>Method</em>.</p>
-<pre><code>writegraph(file, g, t; compress=false)
+<pre><code>writegraph(file, g)
+writegraph(file, g, t; compress=false)
 </code></pre>
 
 <p>Save a graph <code>g</code> to <code>file</code> in the format <code>t</code>.</p>
 <p>Eventually the resulting file can be compressed in the gzip format.</p>
-<p>Currently supported formats are <code>:gml, :graphml, :gexf, :dot, :NET, :gt</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/persistence/common.jl#L34-L42' class='documenter-source'>source</a><br></p>
+<p>Currently supported formats are <code>:gml, :graphml, :gexf, :dot, :net, :gt</code>.</p>
+<p>If no format is provided, it will be inferred from <code>file</code> along with compression.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/persistence/common.jl#L51-L62' class='documenter-source'>source</a><br></p>
 <p><a id='Examples-1'></a></p>
 <h2 id="examples">Examples</h2>
 <pre><code class="julia">writegraph(STDOUT, g)

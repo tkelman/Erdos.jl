@@ -55,15 +55,9 @@
             
                 <li class="toctree-l3"><a href="#fatgraphs">FatGraphs</a></li>
                 
-                    <li><a class="toctree-l4" href="#documentation">Documentation</a></li>
-                
                     <li><a class="toctree-l4" href="#installation">Installation</a></li>
                 
-                    <li><a class="toctree-l4" href="#usage-examples">Usage Examples</a></li>
-                
-                    <li><a class="toctree-l4" href="#current-functionality">Current functionality</a></li>
-                
-                    <li><a class="toctree-l4" href="#contributing-and-reporting-bugs">Contributing and Reporting Bugs</a></li>
+                    <li><a class="toctree-l4" href="#basic-examples">Basic examples</a></li>
                 
             
             </ul>
@@ -73,7 +67,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="factory/">Graph Types</a>
+        <a class="" href="types/">Types and Constructors</a>
         
     </li>
 <li>
@@ -81,6 +75,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="core/">Basic Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="maps/">Maps</a>
         
     </li>
 <li>
@@ -164,28 +165,14 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="dismantling/">Dismantling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="spanningtrees/">Spanning Trees</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="integration/">Integration with other packages</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="contributing/">Contributing</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="license/">License Information</a>
         
     </li>
 <li>
@@ -227,23 +214,18 @@
               
                 <p><a id='FatGraphs-1'></a></p>
 <h1 id="fatgraphs">FatGraphs</h1>
-<p><a href="https://travis-ci.org/CarloLucibello/FatGraphs.jl"><img alt="Build Status" src="https://travis-ci.org/CarloLucibello/FatGraphs.jl.svg?branch=master" /></a> <a href="http://codecov.io/github/CarloLucibello/FatGraphs.jl?branch=master"><img alt="codecov.io" src="http://codecov.io/github/CarloLucibello/FatGraphs.jl/coverage.svg?branch=master" /></a> <a href="https://carlolucibello.github.io/FatGraphs.jl"><img alt="" src="https://img.shields.io/badge/docs-latest-blue.svg" /></a></p>
-<p>A graph library entirely written in Julia, derived from the beautiful library <a href="https://github.com/JuliaGraphs/LightGraphs.jl">LightGraphs.jl</a>.</p>
-<p><a id='Documentation-1'></a></p>
-<h2 id="documentation">Documentation</h2>
-<p>Full documentation available at <a href="https://carlolucibello.github.io/FatGraphs.jl">GitHub Pages</a>. Documentation for methods is also available via the Julia REPL help system.</p>
 <p><a id='Installation-1'></a></p>
 <h2 id="installation">Installation</h2>
 <p>Installation is straightforward:</p>
-<pre><code class="julia">julia&gt; Pkg.clone(&quot;https://github.com/CarloLucibello/FatGraphs.jl&quot;)
+<pre><code class="julia">julia&gt; Pkg.add(&quot;FatGraphs&quot;)
 </code></pre>
 
-<p><a id='Usage-Examples-1'></a></p>
-<h2 id="usage-examples">Usage Examples</h2>
-<p>(all examples apply equally to <code>DiGraph</code> unless otherwise noted):</p>
+<p><a id='Basic-examples-1'></a></p>
+<h2 id="basic-examples">Basic examples</h2>
+<p>All examples apply equally to <code>DiGraph</code> unless otherwise noted:</p>
 <pre><code class="julia">g = Graph() # empty undirected graph
 
-g = Graph(10) # a graph with 10 veritces and no edges
+g = Graph(10) # a graph with 10 vertices and no edges
 @assert nv(g) == 10
 
 g = Graph(10, 30) # a graph with 10 vertices and 30 randomly placed edges
@@ -274,31 +256,6 @@ dijkstra_shortest_paths(g, 4, distmx=distmx).dists
 g = readgraph(&quot;mygraph.gml&quot;, :gml)
 writegraph(&quot;mygraph.gml&quot;, g, :gml)
 </code></pre>
-
-<p><a id='Current-functionality-1'></a></p>
-<h2 id="current-functionality">Current functionality</h2>
-<ul>
-<li><strong>core functions:</strong> vertices and edges addition and removal, degree (in/out/histogram), neighbors (in/out/all/common)</li>
-<li><strong>distance within graphs:</strong> eccentricity, diameter, periphery, radius, center</li>
-<li><strong>distance between graphs:</strong> spectral_distance, edit_distance</li>
-<li><strong>connectivity:</strong> strongly- and weakly-connected components, bipartite checks, condensation, attracting components, neighborhood</li>
-<li><strong>operators:</strong> complement, reverse, reverse!, union, join, intersect, difference, symmetric difference, blkdiag, induced subgraphs, products (cartesian/scalar)</li>
-<li><strong>shortest paths:</strong> Dijkstra, Dijkstra with predecessors, Bellman-Ford, Floyd-Warshall, A*</li>
-<li><strong>small graph generators:</strong> see <a href="https://github.com/CarloLucibello/FatGraphs.jl/blob/master/src/datasets/smallgraphs.jl">smallgraphs.jl</a> for list</li>
-<li><strong>random graph generators:</strong> Erdős–Rényi, Watts-Strogatz, random regular, arbitrary degree sequence, stochastic block model</li>
-<li><strong>centrality:</strong> betweenness, closeness, degree, pagerank, Katz</li>
-<li><strong>traversal operations:</strong> cycle detection, BFS and DFS DAGs, BFS and DFS traversals with visitors, DFS topological sort, maximum adjacency / minimum cut, multiple random walks</li>
-<li><strong>flow operations:</strong> maximum flow, minimum s-t cut</li>
-<li><strong>matching:</strong> maximum weight matching on arbitrary graphs (through BlossomV algorithm)</li>
-<li><strong>clique enumeration:</strong> maximal cliques</li>
-<li><strong>linear algebra / spectral graph theory:</strong> adjacency matrix (works as input to <a href="https://github.com/IainNZ/GraphLayout.jl">GraphLayout</a> and <a href="https://github.com/JuliaSparse/Metis.jl">Metis</a>), Laplacian matrix, non-backtracking matrix</li>
-<li><strong>community:</strong> modularity, community detection, core-periphery, clustering coefficients</li>
-<li><strong>persistence formats:</strong> <a href="http://en.wikipedia.org/wiki/GraphML">GraphML</a>, <a href="https://en.wikipedia.org/wiki/Graph_Modelling_Language">GML</a>, <a href="http://gexf.net/format">Gexf</a>, <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)">DOT</a>, <a href="http://gephi.org/users/supported-graph-formats/pajek-net-format/">Pajek NET</a>, <a href="https://graph-tool.skewed.de/static/doc/gt_format.html">graph-tool gt</a></li>
-<li><strong>visualization:</strong> integration with <a href="https://github.com/IainNZ/GraphLayout.jl">GraphLayout</a>, <a href="https://github.com/sisl/TikzGraphs.jl">TikzGraphs</a>, <a href="https://github.com/afternone/GraphPlot.jl">GraphPlot</a>, <a href="https://github.com/abhijithanilkumar/NetworkViz.jl/">NetworkViz</a></li>
-</ul>
-<p><a id='Contributing-and-Reporting-Bugs-1'></a></p>
-<h2 id="contributing-and-reporting-bugs">Contributing and Reporting Bugs</h2>
-<p>We welcome contributions and bug reports! Please see <a href="https://github.com/CarloLucibello/FatGraphs.jl/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> for guidance on development and bug reporting.</p>
               
             </div>
           </div>
@@ -306,7 +263,7 @@ writegraph(&quot;mygraph.gml&quot;, g, :gml)
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="factory/" class="btn btn-neutral float-right" title="Graph Types">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="types/" class="btn btn-neutral float-right" title="Types and Constructors">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -336,7 +293,7 @@ writegraph(&quot;mygraph.gml&quot;, g, :gml)
       
       
       
-        <span style="margin-left: 15px"><a href="factory/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="types/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
@@ -349,5 +306,5 @@ writegraph(&quot;mygraph.gml&quot;, g, :gml)
 
 <!--
 MkDocs version : 0.16.1
-Build Date UTC : 2017-01-11 17:56:19
+Build Date UTC : 2017-02-17 19:53:37
 -->

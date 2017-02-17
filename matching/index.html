@@ -56,7 +56,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../factory/">Graph Types</a>
+        <a class="" href="../types/">Types and Constructors</a>
         
     </li>
 <li>
@@ -64,6 +64,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../core/">Basic Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maps/">Maps</a>
         
     </li>
 <li>
@@ -154,28 +161,14 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../dismantling/">Dismantling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../spanningtrees/">Spanning Trees</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../integration/">Integration with other packages</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../contributing/">Contributing</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../license/">License Information</a>
         
     </li>
 <li>
@@ -220,16 +213,13 @@
 <p>Algorithms for the <a href="https://en.wikipedia.org/wiki/Matching_(graph_theory)">optimal matching problem</a>.</p>
 <p><a id='FatGraphs.minimum_weight_perfect_matching' href='#FatGraphs.minimum_weight_perfect_matching'>#</a>
 <strong><code>FatGraphs.minimum_weight_perfect_matching</code></strong> &mdash; <em>Function</em>.</p>
-<pre><code>minimum_weight_perfect_matching{T&lt;:Real, E}(g, w::Dict{E,T} [,cutoff])
+<pre><code>minimum_weight_perfect_matching{T}(g, w::AEdgeMap{T},cutoff=typemax{T})
 </code></pre>
 
-<p>Given a graph <code>g</code> and an edgemap <code>w</code> containing weights associated to edges, returns a matching with the mimimum total weight among the ones containing exactly <code>nv(g)/2</code> edges.</p>
-<p>Edges in <code>g</code> not present in <code>w</code> will not be considered for the matching.</p>
+<p>Given a graph <code>g</code> and an edgemap <code>w</code> containing weights associated to edges, returns a matching with the mimimum total weight among the ones containing exactly <code>nv(g)/2</code> edges. Edges in <code>g</code> not present in <code>w</code> will not be considered for the matching. The returned object is of type <code>MatchingResult</code>.</p>
+<p>To reduce computational time, a <code>cutoff</code> argument can be given. Only edges with weight lower than <code>cutoff</code> will be considered for the matching.</p>
 <p>This function relies on the BlossomV.jl package, a julia wrapper around Kolmogorov's BlossomV algorithm.</p>
-<p>Eventually a <code>cutoff</code> argument can be given, to the reduce computational time excluding edges with weights higher than the cutoff.</p>
-<p>The returned object is of type <code>MatchingResult</code>.</p>
-<p>In case of error try to change the optional argument <code>tmaxscale</code> (default is <code>tmaxscale=10</code>).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/matching/blossomv.jl#L1-L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/matching/blossomv.jl#L1-L14' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
@@ -237,7 +227,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../spanningtrees/" class="btn btn-neutral float-right" title="Spanning Trees">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../dismantling/" class="btn btn-neutral float-right" title="Dismantling">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../flow/" class="btn btn-neutral" title="Flow and Cut"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -271,7 +261,7 @@
         <span><a href="../flow/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../spanningtrees/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../dismantling/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -56,7 +56,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../factory/">Graph Types</a>
+        <a class="" href="../types/">Types and Constructors</a>
         
     </li>
 <li>
@@ -64,6 +64,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../core/">Basic Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maps/">Maps</a>
         
     </li>
 <li>
@@ -126,8 +133,6 @@
                 
                     <li><a class="toctree-l4" href="#euclidean-graphs">Euclidean Graphs</a></li>
                 
-                    <li><a class="toctree-l4" href="#matrixdepot">MatrixDepot</a></li>
-                
             
             </ul>
         
@@ -164,28 +169,14 @@
           
             <li>
     <li class="toctree-l1 ">
+        <a class="" href="../dismantling/">Dismantling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
         <a class="" href="../spanningtrees/">Spanning Trees</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../integration/">Integration with other packages</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../contributing/">Contributing</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../license/">License Information</a>
         
     </li>
 <li>
@@ -239,7 +230,7 @@ barabasi_albert(n, n0, k, G=Graph; seed=-1)
 <p>Creates a random graph of type <code>G</code> with <code>n</code> vertices according to <a href="https://en.wikipedia.org/wiki/Barab%C3%A1si%E2%80%93Albert_model">Barabási–Albert model</a>. It is grown by adding new vertices to an initial graph with <code>n0</code> vertices (<code>n0=k</code> if not specified). Each new vertex is attached with <code>k</code> edges to <code>k</code> different vertices already present in the system by preferential attachment. The initial graph is empty by default.</p>
 <p>Undirected graphs are created by default. Directed graphs can be created passing a directed graph type as last argument (e.g. <code>DiGraph</code>).</p>
 <p>See also <a href="./#FatGraphs.barabasi_albert!-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}"><code>barabasi_albert!</code></a> for growing a given graph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L138-L151' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L137-L150' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.barabasi_albert!-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}' href='#FatGraphs.barabasi_albert!-Tuple{Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Int64,Int64}'>#</a>
 <strong><code>FatGraphs.barabasi_albert!</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>barabasi_albert!(g, n::Int, k::Int; seed::Int = -1)
@@ -247,7 +238,7 @@ barabasi_albert(n, n0, k, G=Graph; seed=-1)
 
 <p>Grows the graph <code>g</code> according to <a href="https://en.wikipedia.org/wiki/Barab%C3%A1si%E2%80%93Albert_model">Barabási–Albert</a> process into a graph with <code>n</code> vertices. At each step a new vertex is attached by preferential attachment to <code>k</code> different vertices already present in the graph.</p>
 <p>See also <a href="./#FatGraphs.barabasi_albert"><code>barabasi_albert</code></a>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L162-L171' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L161-L170' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.erdos_renyi' href='#FatGraphs.erdos_renyi'>#</a>
 <strong><code>FatGraphs.erdos_renyi</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>erdos_renyi(n::Int, p::Real, G=Graph; seed=-1)
@@ -257,16 +248,16 @@ erdos_renyi(n::Int, m::Int, G=Graph; seed=-1)
 <p>Creates an <a href="http://en.wikipedia.org/wiki/Erdős–Rényi_model">Erdős–Rényi</a> random graph of type <code>G</code> with <code>n</code> vertices. Edges are added between pairs of vertices with probability <code>p</code> in the first method. In the second method <code>m</code> edges are randomly chosen insted.</p>
 <p>Undirected graphs are created by default. Directed graphs can be created passing a directed graph type as last argument (e.g. <code>DiGraph</code>)</p>
 <p>Note also that Erdős–Rényi graphs may be generated quickly using <code>erdos_renyi(n, ne)</code> or the  <code>Graph(nv, ne)</code> constructor, which randomly select <code>ne</code> edges among all the potential edges.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L1-L16' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L1-L16' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.random_configuration_model' href='#FatGraphs.random_configuration_model'>#</a>
 <strong><code>FatGraphs.random_configuration_model</code></strong> &mdash; <em>Function</em>.</p>
-<pre><code>random_configuration_model(n::Int, k::Array{Int}; seed=-1, check_graphical=false)
+<pre><code>random_configuration_model(n::Int, k::Vector{Int}; seed=-1, check_graphical=false)
 </code></pre>
 
 <p>Creates a random undirected graph according to the <a href="http://tuvalu.santafe.edu/~aaronc/courses/5352/fall2013/csci5352_2013_L11.pdf">configuraton model</a>. It contains <code>n</code> vertices, the vertex <code>i</code> having degree <code>k[i]</code>.</p>
 <p>Defining <code>c = mean(k)</code>, it allocates an array of <code>nc</code> <code>Int</code>s, and takes approximately $nc^2$ time.</p>
-<p>If <code>check_graphical=true</code> makes sure that <code>k</code> is a graphical sequence (see <code>isgraphical</code>).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L412-L424' class='documenter-source'>source</a><br></p>
+<p>If <code>check_graphical=true</code> makes sure that <code>k</code> is a graphical sequence (see <code>is_graphical</code>).</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L411-L423' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.random_regular_digraph' href='#FatGraphs.random_regular_digraph'>#</a>
 <strong><code>FatGraphs.random_regular_digraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>random_regular_digraph(n::Int, k::Int; dir::Symbol=:out, seed=-1)
@@ -274,7 +265,7 @@ erdos_renyi(n::Int, m::Int, G=Graph; seed=-1)
 
 <p>Creates a random directed <a href="https://en.wikipedia.org/wiki/Regular_graph">regular graph</a> with <code>n</code> vertices, each with degree <code>k</code>. The degree (in or out) can be specified using <code>dir=:in</code> or <code>dir=:out</code>. The default is <code>dir=:out</code>.</p>
 <p>For directed graphs, allocates an $n    imes n$ sparse matrix of boolean as an adjacency matrix and uses that to generate the directed graph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L449-L459' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L448-L458' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.random_regular_graph' href='#FatGraphs.random_regular_graph'>#</a>
 <strong><code>FatGraphs.random_regular_graph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>random_regular_graph(n::Int, k::Int; seed=-1)
@@ -282,7 +273,7 @@ erdos_renyi(n::Int, m::Int, G=Graph; seed=-1)
 
 <p>Creates a random undirected <a href="https://en.wikipedia.org/wiki/Regular_graph">regular graph</a> with <code>n</code> vertices, each with degree <code>k</code>.</p>
 <p>For undirected graphs, allocates an array of <code>nk</code> <code>Int</code>s, and takes approximately $nk^2$ time. For $k &gt; n/2$, generates a graph of degree <code>n-k-1</code> and returns its complement.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L374-L384' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L373-L383' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.static_fitness_model' href='#FatGraphs.static_fitness_model'>#</a>
 <strong><code>FatGraphs.static_fitness_model</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>static_fitness_model(m, fitness, G=Graph; seed=-1)
@@ -296,7 +287,7 @@ static_fitness_model(m, fitness_out, fitness_in, G=DiGraph; seed=-1)
 <li>Goh K-I, Kahng B, Kim D: Universal behaviour of load distribution</li>
 </ul>
 <p>in scale-free networks. Phys Rev Lett 87(27):278701, 2001.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L237-L251' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L236-L250' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.static_scale_free' href='#FatGraphs.static_scale_free'>#</a>
 <strong><code>FatGraphs.static_scale_free</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>function static_scale_free(n, m, α, G=Graph;
@@ -315,7 +306,7 @@ static_fitness_model(m, fitness_out, fitness_in, G=DiGraph; seed=-1)
 <li>Chung F and Lu L: Connected components in a random graph with given degree sequences. Annals of Combinatorics 6, 125-145, 2002.</li>
 <li>Cho YS, Kim JS, Park J, Kahng B, Kim D: Percolation transitions in scale-free networks under the Achlioptas process. Phys Rev Lett 103:135702, 2009.</li>
 </ul>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L314-L336' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L313-L335' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.stochastic_block_model' href='#FatGraphs.stochastic_block_model'>#</a>
 <strong><code>FatGraphs.stochastic_block_model</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>stochastic_block_model(c::Matrix{Float64}, n::Vector{Int}; seed::Int = -1)
@@ -326,7 +317,7 @@ stochastic_block_model(cin::Float64, coff::Float64, n::Vector{Int}; seed::Int = 
 <p><code>c[a,b]</code> : Mean number of neighbors of a vertex in block <code>a</code> belonging to block <code>b</code>.            Only the upper triangular part is considered, since the lower traingular is            determined by $c[b,a] = c[a,b] * n[a]/n[b]$. <code>n[a]</code> : Number of vertices in block <code>a</code></p>
 <p>The second form samples from a SBM with <code>c[a,a]=cin</code>, and <code>c[a,b]=coff</code>.</p>
 <p>For a dynamic version of the SBM see the <code>StochasticBlockModel</code> type and related functions.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L491-L506' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L490-L505' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.watts_strogatz' href='#FatGraphs.watts_strogatz'>#</a>
 <strong><code>FatGraphs.watts_strogatz</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>watts_strogatz(n, k, β, G=Graph; seed=-1)
@@ -334,7 +325,7 @@ stochastic_block_model(cin::Float64, coff::Float64, n::Vector{Int}; seed::Int = 
 
 <p>Creates a <a href="https://en.wikipedia.org/wiki/Watts_and_Strogatz_model">Watts-Strogatz</a> small model random graph with <code>n</code> vertices, each with degree <code>k</code>. Edges are randomized per the model based on probability <code>β</code>.</p>
 <p>Undirected graphs are created by default. Directed graphs can be created passing a directed graph type as last argument (e.g. <code>DiGraph</code>).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/randgraphs.jl#L46-L55' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/randgraphs.jl#L44-L53' class='documenter-source'>source</a><br></p>
 <p><a id='Static-Graphs-1'></a></p>
 <h2 id="static-graphs">Static Graphs</h2>
 <p><em>FatGraphs.jl</em> also implements a collection of classic graph generators:</p>
@@ -344,103 +335,111 @@ stochastic_block_model(cin::Float64, coff::Float64, n::Vector{Int}; seed::Int = 
 </code></pre>
 
 <p>Creates a binary tree with k-levels vertices are numbered 1:2^levels-1</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L177-L181' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L179-L183' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.CliqueGraph' href='#FatGraphs.CliqueGraph'>#</a>
 <strong><code>FatGraphs.CliqueGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>CliqueGraph(k, n, G=Graph)
 </code></pre>
 
 <p>This function generates a graph with <code>n</code> <code>k</code>-cliques connected circularly by <code>n</code> edges.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L221-L225' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L223-L227' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.CompleteBipartiteGraph' href='#FatGraphs.CompleteBipartiteGraph'>#</a>
 <strong><code>FatGraphs.CompleteBipartiteGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>CompleteBipartiteGraph(n1, n2, G = Graph)
 </code></pre>
 
 <p>Creates a complete bipartite graph with <code>n1+n2</code> vertices. It has edges connecting each pair of vertices in the two sets.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L21-L26' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L20-L25' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.CompleteDiGraph' href='#FatGraphs.CompleteDiGraph'>#</a>
 <strong><code>FatGraphs.CompleteDiGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>CompleteDiGraph(n, G = DiGraph)
 </code></pre>
 
 <p>Creates a complete digraph with <code>n</code> vertices. A complete digraph has edges connecting each pair of vertices (both an ingoing and outgoing edge).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L35-L40' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L35-L40' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.CompleteGraph' href='#FatGraphs.CompleteGraph'>#</a>
 <strong><code>FatGraphs.CompleteGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>CompleteGraph(n, G = Graph)
 </code></pre>
 
 <p>Creates a complete graph of type <code>G</code> with <code>n</code> vertices. A complete graph has edges connecting each pair of vertices.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L4-L9' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L4-L9' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.CycleDiGraph' href='#FatGraphs.CycleDiGraph'>#</a>
 <strong><code>FatGraphs.CycleDiGraph</code></strong> &mdash; <em>Function</em>.</p>
 <p>Creates a cycle digraph with <code>n</code> vertices. A cycle digraph is a closed path digraph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L118-L120' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L120-L122' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.CycleGraph' href='#FatGraphs.CycleGraph'>#</a>
 <strong><code>FatGraphs.CycleGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>CycleGraph(n, G=Graph)
 </code></pre>
 
 <p>Creates a cycle graph with <code>n</code> vertices. A cycle graph is a closed path graph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L104-L108' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L106-L110' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.DoubleBinaryTree' href='#FatGraphs.DoubleBinaryTree'>#</a>
 <strong><code>FatGraphs.DoubleBinaryTree</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>DoubleBinaryTree(levels, G=Graph)
 </code></pre>
 
 <p>Create a double complete binary tree with k-levels used as an example for spectral clustering by Guattery and Miller 1998.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L193-L198' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L195-L200' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.Grid' href='#FatGraphs.Grid'>#</a>
 <strong><code>FatGraphs.Grid</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>Grid{T&lt;:Integer}(dims::AbstractVector{T}; periodic=false)
 </code></pre>
 
 <p>Creates a <code>d</code>-dimensional cubic lattice, with <code>d=length(dims)</code> and length  <code>dims[i]</code> in dimension <code>i</code>. If <code>periodic=true</code> the resulting lattice will have periodic boundary condition in each dimension.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L161-L166' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L163-L168' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.PathDiGraph' href='#FatGraphs.PathDiGraph'>#</a>
 <strong><code>FatGraphs.PathDiGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>PathDiGraph(n, G = DiGraph)
 </code></pre>
 
 <p>Creates a path digraph with <code>n</code> vertices. A path graph connects each successive vertex by a single directed edge.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L90-L95' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L92-L97' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.PathGraph' href='#FatGraphs.PathGraph'>#</a>
 <strong><code>FatGraphs.PathGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>PathGraph(n, G = Graph)
 </code></pre>
 
 <p>Creates a path graph with <code>n</code> vertices. A path graph connects each successive vertex by a single edge.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L76-L81' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L78-L83' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.RoachGraph' href='#FatGraphs.RoachGraph'>#</a>
 <strong><code>FatGraphs.RoachGraph</code></strong> &mdash; <em>Function</em>.</p>
 <p>The Roach Graph from Guattery and Miller 1998</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L208' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L210' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.StarDiGraph' href='#FatGraphs.StarDiGraph'>#</a>
 <strong><code>FatGraphs.StarDiGraph</code></strong> &mdash; <em>Function</em>.</p>
 <p>Creates a star digraph with <code>n</code> vertices. A star digraph has a central vertex with directed edges to every other vertex.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L65-L68' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L67-L70' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.StarGraph' href='#FatGraphs.StarGraph'>#</a>
 <strong><code>FatGraphs.StarGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>StarGraph(n, G = Graph)
 </code></pre>
 
 <p>Creates a star graph with <code>n</code> vertices. A star graph has a central vertex with edges to each other vertex.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L51-L56' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L53-L58' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.WheelDiGraph' href='#FatGraphs.WheelDiGraph'>#</a>
 <strong><code>FatGraphs.WheelDiGraph</code></strong> &mdash; <em>Function</em>.</p>
 <p>Creates a wheel digraph with <code>n</code> vertices. A wheel graph is a star digraph with the outer vertices connected via a closed path graph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L147-L150' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L149-L152' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.WheelGraph' href='#FatGraphs.WheelGraph'>#</a>
 <strong><code>FatGraphs.WheelGraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>WheelGraph(n, G=Graph)
 </code></pre>
 
 <p>Creates a wheel graph with <code>n</code> vertices. A wheel graph is a star graph with the outer vertices connected via a closed path graph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/staticgraphs.jl#L130-L135' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/staticgraphs.jl#L132-L137' class='documenter-source'>source</a><br></p>
 <p><a id='Small-Graphs-1'></a></p>
 <h2 id="small-graphs">Small Graphs</h2>
 <p>Other classical graphs can be generated by the following function:</p>
+<p><a id='FatGraphs.digraph' href='#FatGraphs.digraph'>#</a>
+<strong><code>FatGraphs.digraph</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>digraph{G&lt;:AGraph}(n, edgelist::Vector{Tuple{Int,Int}},
+    G = Graph)
+</code></pre>
+
+<p>Build a digraph with <code>n</code> vertices, type <code>G</code>, and given <code>edgelist</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/smallgraphs.jl#L20-L25' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.digraph' href='#FatGraphs.digraph'>#</a>
 <strong><code>FatGraphs.digraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>digraph(s::Symbol, G = DiGraph)
@@ -461,23 +460,7 @@ stochastic_block_model(cin::Float64, coff::Float64, n::Vector{Int}; seed::Int = 
 </tr>
 </tbody>
 </table>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/smallgraphs.jl#L98-L107' class='documenter-source'>source</a><br></p>
-<p><a id='FatGraphs.digraph' href='#FatGraphs.digraph'>#</a>
-<strong><code>FatGraphs.digraph</code></strong> &mdash; <em>Function</em>.</p>
-<pre><code>digraph{G&lt;:AGraph}(n, edgelist::Vector{Tuple{Int,Int}},
-    G = Graph)
-</code></pre>
-
-<p>Build a digraph with <code>n</code> vertices, type <code>G</code>, and given <code>edgelist</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/smallgraphs.jl#L20-L25' class='documenter-source'>source</a><br></p>
-<p><a id='FatGraphs.graph' href='#FatGraphs.graph'>#</a>
-<strong><code>FatGraphs.graph</code></strong> &mdash; <em>Function</em>.</p>
-<pre><code>graph{G&lt;:AGraph}(n, edgelist::Vector{Tuple{Int,Int}},
-    G = Graph)
-</code></pre>
-
-<p>Build a graph with <code>n</code> vertices, type <code>G</code>, and given <code>edgelist</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/smallgraphs.jl#L4-L9' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/smallgraphs.jl#L98-L107' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.graph' href='#FatGraphs.graph'>#</a>
 <strong><code>FatGraphs.graph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>graph(s::Symbol, G = Graph)
@@ -582,7 +565,15 @@ stochastic_block_model(cin::Float64, coff::Float64, n::Vector{Int}; seed::Int = 
 </tr>
 </tbody>
 </table>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/smallgraphs.jl#L35-L65' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/smallgraphs.jl#L35-L65' class='documenter-source'>source</a><br></p>
+<p><a id='FatGraphs.graph' href='#FatGraphs.graph'>#</a>
+<strong><code>FatGraphs.graph</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>graph{G&lt;:AGraph}(n, edgelist::Vector{Tuple{Int,Int}},
+    G = Graph)
+</code></pre>
+
+<p>Build a graph with <code>n</code> vertices, type <code>G</code>, and given <code>edgelist</code>.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/smallgraphs.jl#L4-L9' class='documenter-source'>source</a><br></p>
 <p><a id='Euclidean-Graphs-1'></a></p>
 <h2 id="euclidean-graphs">Euclidean Graphs</h2>
 <p>Generation of random and static graphs embedded in Euclidean space.</p>
@@ -599,10 +590,7 @@ stochastic_block_model(cin::Float64, coff::Float64, n::Vector{Int}; seed::Int = 
 
 <p>Generates <code>N</code> uniformly distributed points in the box $[0,L]^d$ and builds and Euclidean graph.</p>
 <p>Returns a graph, a Dict containing the distance on each edge and a matrix with the points' positions.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/d24f6e27b50b6b0ed47bf33a6887df23218dda7f/docs/../src/generators/euclideangraphs.jl#L1-L23' class='documenter-source'>source</a><br></p>
-<p><a id='MatrixDepot-1'></a></p>
-<h2 id="matrixdepot">MatrixDepot</h2>
-<p>Other notorious graphs are available through integration with the <code>MatrixDepot.jl</code> package.</p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/generators/euclideangraphs.jl#L1-L23' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>

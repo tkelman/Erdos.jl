@@ -4,15 +4,15 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/factory/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <loc>/types/</loc>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,15 @@
     
     <url>
      <loc>/core/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/maps/</loc>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +36,7 @@
     
     <url>
      <loc>/operators/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +44,7 @@
     
     <url>
      <loc>/traversals/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +52,7 @@
     
     <url>
      <loc>/distance/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -52,7 +60,7 @@
     
     <url>
      <loc>/shortestpaths/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -60,7 +68,7 @@
     
     <url>
      <loc>/linalg/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -68,7 +76,7 @@
     
     <url>
      <loc>/persistence/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -76,7 +84,7 @@
     
     <url>
      <loc>/generators/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -84,7 +92,7 @@
     
     <url>
      <loc>/centrality/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -92,7 +100,7 @@
     
     <url>
      <loc>/community/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -100,7 +108,7 @@
     
     <url>
      <loc>/flow/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -108,7 +116,15 @@
     
     <url>
      <loc>/matching/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/dismantling/</loc>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -116,31 +132,7 @@
     
     <url>
      <loc>/spanningtrees/</loc>
-     <lastmod>2017-01-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/integration/</loc>
-     <lastmod>2017-01-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/contributing/</loc>
-     <lastmod>2017-01-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/license/</loc>
-     <lastmod>2017-01-11</lastmod>
+     <lastmod>2017-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
