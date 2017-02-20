@@ -55,9 +55,9 @@
             
                 <li class="toctree-l3"><a href="#fatgraphs">FatGraphs</a></li>
                 
-                    <li><a class="toctree-l4" href="#installation">Installation</a></li>
-                
                     <li><a class="toctree-l4" href="#basic-examples">Basic examples</a></li>
+                
+                    <li><a class="toctree-l4" href="#ready-to-explore">Ready to explore</a></li>
                 
             
             </ul>
@@ -214,48 +214,165 @@
               
                 <p><a id='FatGraphs-1'></a></p>
 <h1 id="fatgraphs">FatGraphs</h1>
-<p><a id='Installation-1'></a></p>
-<h2 id="installation">Installation</h2>
-<p>Installation is straightforward:</p>
+<p>FatGraphs is a graph library written in Julia. Installation is straightforward:</p>
 <pre><code class="julia">julia&gt; Pkg.add(&quot;FatGraphs&quot;)
 </code></pre>
 
+<p>All (directed/undirected) graphs  in FatGraphs have <code>1:n</code> indexed vertices, where <code>n</code> is the number of vertices. Multi-edges are not allowed. Self-edges are experimentally supported. Provided this constraints, new graph types can be easily introduced, just defining a few basic methods.</p>
 <p><a id='Basic-examples-1'></a></p>
 <h2 id="basic-examples">Basic examples</h2>
-<p>All examples apply equally to <code>DiGraph</code> unless otherwise noted:</p>
-<pre><code class="julia">g = Graph() # empty undirected graph
+<p><a id='Constructors-1'></a></p>
+<h3 id="constructors">Constructors</h3>
+<p>Build your first graph using basic constructor.</p>
+<pre><code class="julia">julia&gt; using FatGraphs
 
-g = Graph(10) # a graph with 10 vertices and no edges
-@assert nv(g) == 10
+julia&gt; g = CompleteGraph(100)
+Graph{Int64}(100, 4950)
 
-g = Graph(10, 30) # a graph with 10 vertices and 30 randomly placed edges
-@assert ne(g) == 30
+julia&gt; g = Graph{Int32}(100)
+Graph{Int32}(100, 0)
 
-add_edge!(g, 4, 5)
-add_vertex!(g)
-rem_vertex!(g, 2)
-neighbors(g, 4)
+julia&gt; g = DiGraph()
+DiGraph{Int64}(0, 0)
 
-# iterate over the edges
-m = 0
-for e in edges(g)
-    m += 1
-end
-@assert m == ne(g)
+julia&gt; g = erdos_renyi(10,30)
+Graph{Int64}(10, 30)
 
-# show distances between vertex 4 and all other vertices
-dijkstra_shortest_paths(g, 4).dists
-
-# as above, but with non-default edge distances
-distmx = zeros(10,10)
-distmx[4,5] = 2.5
-distmx[5,4] = 2.5
-dijkstra_shortest_paths(g, 4, distmx=distmx).dists
-
-# graph I/O
-g = readgraph(&quot;mygraph.gml&quot;, :gml)
-writegraph(&quot;mygraph.gml&quot;, g, :gml)
+julia&gt; g = random_regular_graph(10,3,seed=17)
+Graph{Int64}(10, 15).
 </code></pre>
+
+<p>The default graph and digraph types are <code>Graph{Int}</code> and <code>DiGraph{Int}</code>. Use  the <code>Graph{Int32}</code> type to save memory if working with very large graphs.</p>
+<p><a id='Queries-1'></a></p>
+<h3 id="queries">Queries</h3>
+<pre><code class="julia">julia&gt; g = CompleteBipartiteGraph(5,10)
+Graph{Int64}(15, 50)
+
+julia&gt; is_bipartite(g)
+true
+
+julia&gt; nv(g) # number of vertices
+15
+
+julia&gt; ne(g) #number of edges
+50
+
+julia&gt; has_edge(g,1,2)
+false
+
+julia&gt; has_edge(g,1,6)
+true
+
+julia&gt; degree(g,1)
+10
+</code></pre>
+
+<p><a id='Modifiers-1'></a></p>
+<h3 id="modifiers">Modifiers</h3>
+<p>All examples apply equally to <code>DiGraph</code> unless otherwise noted:</p>
+<pre><code class="julia">julia&gt; g=DiGraph(10)
+DiGraph{Int64}(10, 0)
+
+julia&gt; add_edge!(g,1,2)
+true
+
+julia&gt; g
+DiGraph{Int64}(10, 1)
+
+# trying to add an edge between non-existen vertices results in a
+# (silent) failure
+julia&gt; add_edge!(g,1,11)
+false
+
+# has the addition of an already existent edge
+julia&gt; add_edge!(g,1,2)
+false
+
+julia&gt; add_edge!(g,2,1)
+true
+
+julia&gt; rem_edge!(g,2,1)
+true
+
+# returns the index of the vertex
+julia&gt; add_vertex!(g)
+11
+
+# vertex removal will cause the switch of the last index
+# with the removed one, to keep the indexes continuity.
+julia&gt; rem_vertex!(g,1)
+true
+
+julia&gt; rem_vertex!(g,12)
+false
+</code></pre>
+
+<p><a id='Iterators-1'></a></p>
+<h3 id="iterators">Iterators</h3>
+<pre><code class="julia">julia&gt; g = Graph(10,20) #erdos renyi random graph with 10 vertices and 20 edges
+Graph{Int64}(10, 20)
+
+julia&gt; numedges = 0;
+
+# iterate over all edges
+julia&gt; for e in edges(g)
+           i, j = src(e), dst(e) # source and destination of an edge
+           @assert i &lt;= j  # default for undirected graphs
+           numedge += 1
+       end
+
+julia&gt; ne(g) == numedge
+true
+
+julia&gt; k=0;
+
+julia&gt; for i in neighbors(g,1)
+           @assert has_edge(g, 1, i);
+           k += 1
+       end
+
+julia&gt; degree(g, 1) == k
+true
+</code></pre>
+
+<p><a id='I/O-1'></a></p>
+<h3 id="io">I/O</h3>
+<p>FatGraphs supports many standard graph format. Here is an example with Pajek's .net format:</p>
+<pre><code class="julia">julia&gt; g = DiGraph(10,20)
+DiGraph{Int64}(10, 20)
+
+julia&gt; writegraph(&quot;test.net&quot;, g)
+1
+
+julia&gt; h = readgraph(&quot;test.net&quot;)
+DiGraph{Int64}(10, 20)
+
+julia&gt; g == h
+true
+</code></pre>
+
+<p><a id='Ready-to-explore-1'></a></p>
+<h2 id="ready-to-explore">Ready to explore</h2>
+<p>Refer to the documentation to explore all the features of FatGraphs:</p>
+<ul>
+<li><strong>core functions:</strong> vertices and edges addition and removal, degree (in/out/histogram), neighbors (in/out/all/common)</li>
+<li><strong>distance within graphs:</strong> eccentricity, diameter, periphery, radius, center</li>
+<li><strong>distance between graphs:</strong> spectral_distance, edit_distance</li>
+<li><strong>connectivity:</strong> strongly- and weakly-connected components, bipartite checks, condensation, attracting components, neighborhood, k-core</li>
+<li><strong>operators:</strong> complement, reverse, reverse!, union, join, intersect, difference, symmetric difference, blkdiag, induced subgraphs, products (cartesian/scalar)</li>
+<li><strong>shortest paths:</strong> Dijkstra, Dijkstra with predecessors, Bellman-Ford, Floyd-Warshall, A*</li>
+<li><strong>small graph generators:</strong> see <a href="https://github.com/CarloLucibello/FatGraphs.jl/blob/master/src/datasets/smallgraphs.jl">smallgraphs.jl</a> for a list</li>
+<li><strong>random graph generators:</strong> Erdős–Rényi, Watts-Strogatz, random regular, arbitrary degree sequence, stochastic block model</li>
+<li><strong>centrality:</strong> betweenness, closeness, degree, pagerank, Katz</li>
+<li><strong>traversal operations:</strong> cycle detection, BFS and DFS DAGs, BFS and DFS traversals with visitors, DFS topological sort, maximum adjacency / minimum cut, multiple random walks</li>
+<li><strong>flow operations:</strong> maximum flow, minimum s-t cut</li>
+<li><strong>matching:</strong> maximum weight matching on arbitrary graphs (through BlossomV algorithm)</li>
+<li><strong>dismantling:</strong> collective influencer heuristic</li>
+<li><strong>clique enumeration:</strong> maximal cliques</li>
+<li><strong>linear algebra / spectral graph theory:</strong> adjacency matrix, Laplacian matrix, non-backtracking matrix</li>
+<li><strong>community:</strong> modularity, community detection, core-periphery, clustering coefficients</li>
+<li><strong>I/O formats:</strong> <a href="http://en.wikipedia.org/wiki/GraphML">graphml</a>, <a href="https://en.wikipedia.org/wiki/Graph_Modelling_Language">gml</a>, <a href="http://gexf.net/format">gexf</a>, <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)">dot</a>, <a href="http://gephi.org/users/supported-graph-formats/pajek-net-format/">net</a>, <a href="https://graph-tool.skewed.de/static/doc/gt_format.html">gt</a></li>
+</ul>
               
             </div>
           </div>
@@ -306,5 +423,5 @@ writegraph(&quot;mygraph.gml&quot;, g, :gml)
 
 <!--
 MkDocs version : 0.16.1
-Build Date UTC : 2017-02-17 19:53:37
+Build Date UTC : 2017-02-20 18:14:59
 -->

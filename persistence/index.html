@@ -213,6 +213,15 @@
                 <p><a id='Reading-and-writing-Graphs-1'></a></p>
 <h1 id="reading-and-writing-graphs">Reading and writing Graphs</h1>
 <p>Graphs may be written to I/O streams and files using the <code>writegraph</code> function and read with the <code>readgraph</code> function. Currently supported common graph formats are <a href="http://en.wikipedia.org/wiki/GraphML">GraphML</a>, <a href="https://en.wikipedia.org/wiki/Graph_Modelling_Language">GML</a>, <a href="http://gexf.net/format">Gexf</a>, <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)">DOT</a>, <a href="http://gephi.org/users/supported-graph-formats/pajek-net-format/">Pajek .net</a>, <a href="https://graph-tool.skewed.de/static/doc/gt_format.html">graph-tool gt</a></p>
+<p><a id='Examples-1'></a></p>
+<h2 id="examples">Examples</h2>
+<pre><code class="julia">writegraph(&quot;mygraph.gml&quot;, g) #format is inferred by the name
+writegraph(&quot;mygraph.graphml&quot;, g)
+
+g = readgraph(&quot;mygraph.dot&quot;)
+g = readgraph(&quot;mygraph.net&quot;)
+</code></pre>
+
 <p><a id='FatGraphs.readgraph' href='#FatGraphs.readgraph'>#</a>
 <strong><code>FatGraphs.readgraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>readgraph(filename, G=Graph)
@@ -222,7 +231,7 @@ readgraph(filename, t, G=Graph; compressed=false)
 <p>Reads a graph from  <code>filename</code> in the format <code>t</code>. Returns a graph of type <code>G</code>. Compressed files can eventually be read.</p>
 <p>Supported formats are <code>:gml, :dot, :graphml, :gexf, :net, :gt</code>.</p>
 <p>If no format is provided, it will be inferred from <code>filename</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/persistence/common.jl#L9-L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/3b5e001fbded0d111333424c0e15d07266a85f38/docs/../src/persistence/common.jl#L9-L19' class='documenter-source'>source</a><br></p>
 <p><a id='FatGraphs.writegraph-Tuple{IO,Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Symbol}' href='#FatGraphs.writegraph-Tuple{IO,Union{FatGraphs.ADiGraph,FatGraphs.AGraph},Symbol}'>#</a>
 <strong><code>FatGraphs.writegraph</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>writegraph(file, g)
@@ -233,17 +242,7 @@ writegraph(file, g, t; compress=false)
 <p>Eventually the resulting file can be compressed in the gzip format.</p>
 <p>Currently supported formats are <code>:gml, :graphml, :gexf, :dot, :net, :gt</code>.</p>
 <p>If no format is provided, it will be inferred from <code>file</code> along with compression.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/a196654f85106f00c0763e09fae6e4aa160a21d4/docs/../src/persistence/common.jl#L51-L62' class='documenter-source'>source</a><br></p>
-<p><a id='Examples-1'></a></p>
-<h2 id="examples">Examples</h2>
-<pre><code class="julia">writegraph(STDOUT, g)
-writegraph(&quot;mygraph.gml&quot;, g, :gml)
-writegraph(&quot;mygraph.dot.gzip&quot;, g, :dot, compress=true)
-
-g = readgraph(&quot;mygraph.dot.gzip&quot;, :dot)
-g = readgraph(&quot;mygraphs.graphml&quot;, :graphml)
-g = readgraph(&quot;mygraph.gml&quot;, :gml)
-</code></pre>
+<p><a target='_blank' href='https://github.com/CarloLucibello/FatGraphs.jl/tree/3b5e001fbded0d111333424c0e15d07266a85f38/docs/../src/persistence/common.jl#L51-L62' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
