@@ -218,7 +218,8 @@
 <pre><code class="julia">julia&gt; Pkg.add(&quot;Erdos&quot;)
 </code></pre>
 
-<p>All (directed/undirected) graphs  in Erdos have <code>1:n</code> indexed vertices, where <code>n</code> is the number of vertices. Multi-edges are not allowed. Self-edges are experimentally supported. Provided this constraints, new graph types can be easily introduced, just defining a few basic methods.</p>
+<p>Erdos defines two abstract type, <code>AGraph</code> and <code>ADiGraph</code>, from which all concrete undirected and directed graph types are derived.</p>
+<p>All graphs  in Erdos have <code>1:n</code> indexed vertices, where <code>n</code> is the number of vertices. Multi-edges are not allowed. Self-edges are experimentally supported. Provided this constraints, new graph types can be easily introduced, just defining a few basic methods.</p>
 <p><a id='Basic-examples-1'></a></p>
 <h2 id="basic-examples">Basic examples</h2>
 <p><a id='Constructors-1'></a></p>
@@ -422,5 +423,5 @@ true
 
 <!--
 MkDocs version : 0.16.1
-Build Date UTC : 2017-03-04 00:03:55
+Build Date UTC : 2017-03-04 12:28:20
 -->

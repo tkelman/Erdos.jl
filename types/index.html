@@ -227,28 +227,28 @@
 </code></pre>
 
 <p>Abstract undirected graph type</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L1-L5' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/core/interface.jl#L1-L5' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.ADiGraph' href='#Erdos.ADiGraph'>#</a>
 <strong><code>Erdos.ADiGraph</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>abstract ADiGraph
 </code></pre>
 
 <p>Abstract directed graph type</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L8-L12' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/core/interface.jl#L8-L12' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.ASimpleGraph' href='#Erdos.ASimpleGraph'>#</a>
 <strong><code>Erdos.ASimpleGraph</code></strong> &mdash; <em>Constant</em>.</p>
 <pre><code>@compat const ASimpleGraph = Union{AGraph, ADiGraph}
 </code></pre>
 
 <p>Union of <a href="./#Erdos.AGraph"><code>AGraph</code></a> and <a href="./#Erdos.ADiGraph"><code>ADiGraph</code></a>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L15-L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/core/interface.jl#L15-L19' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.AEdge' href='#Erdos.AEdge'>#</a>
 <strong><code>Erdos.AEdge</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>abstract AEdge
 </code></pre>
 
 <p>An abstract edge type.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L139-L143' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/core/interface.jl#L139-L143' class='documenter-source'>source</a><br></p>
 <p><a id='Graph-/-DiGraph-/-Edge-1'></a></p>
 <h2 id="graph-digraph-edge">Graph / DiGraph / Edge</h2>
 <p><a id='Erdos.Graph' href='#Erdos.Graph'>#</a>
@@ -270,7 +270,7 @@ Graph(adjmx::AbstractMatrix) = Graph{Int}(adjmx)
 </code></pre>
 
 <p>Construct a <code>Graph{T}</code> from the adjacency matrix <code>adjmx</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/factory/graph.jl#L2-L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/factory/graph.jl#L2-L19' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.DiGraph' href='#Erdos.DiGraph'>#</a>
 <strong><code>Erdos.DiGraph</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>type DiGraph{T&lt;:Integer} &lt;: ADiGraph
@@ -291,7 +291,7 @@ DiGraph(adjmx::AbstractMatrix) = DiGraph{Int}(adjmx)
 </code></pre>
 
 <p>Construct a <code>DiGraph</code> from the adjacency matrix <code>adjmx</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/factory/graph.jl#L50-L68' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/factory/graph.jl#L50-L68' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.Edge' href='#Erdos.Edge'>#</a>
 <strong><code>Erdos.Edge</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>immutable Edge
@@ -301,7 +301,7 @@ end
 </code></pre>
 
 <p>A type representing an edge between two vertices of a graph.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/edge.jl#L21-L28' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/core/edge.jl#L21-L28' class='documenter-source'>source</a><br></p>
 <p><a id='GTGraph-/-GTDiGraph-/-GTEdge-1'></a></p>
 <h2 id="gtgraph-gtdigraph-gtedge">GTGraph / GTDiGraph / GTEdge</h2>
 <p><a id='Erdos.GTGraph' href='#Erdos.GTGraph'>#</a>
@@ -328,7 +328,7 @@ end
 </code></pre>
 
 <p>Construct a <code>GTDiGraph</code> from the adjacency matrix <code>adjmx</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/factory/gtgraph.jl#L28-L50' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/factory/gtgraph.jl#L28-L50' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.GTDiGraph' href='#Erdos.GTDiGraph'>#</a>
 <strong><code>Erdos.GTDiGraph</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>type GTDiGraph &lt;: ADiGraph
@@ -354,7 +354,7 @@ end
 </code></pre>
 
 <p>Construct a <code>GTDiGraph</code> from the adjacency matrix <code>adjmx</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/factory/gtgraph.jl#L63-L87' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/factory/gtgraph.jl#L63-L87' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.GTEdge' href='#Erdos.GTEdge'>#</a>
 <strong><code>Erdos.GTEdge</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>immutable GTEdge &lt;: AEdge
@@ -369,7 +369,7 @@ end
 </code></pre>
 
 <p>Creates an edge with unvalid index.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/factory/gtgraph.jl#L1-L13' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/1953bc71f9c69bfa1765889a0ca58a42113b7c88/docs/../src/factory/gtgraph.jl#L1-L13' class='documenter-source'>source</a><br></p>
 <p><a id='Defining-new-types-1'></a></p>
 <h2 id="defining-new-types">Defining new types</h2>
 <p>In order to define a custom graph type, e.g. <code>MyGraph &lt;: AGraph</code>, some guarantee have to be respected and some method have to be exposed. Take a look to the files in <code>src/factory/</code> for some examples. Custom edges, e.g. <code>MyEdge &lt;: AEdge</code>,  have to expose <code>src(e)</code> and <code>dst(e)</code> methods.</p>
