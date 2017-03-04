@@ -223,7 +223,7 @@
 </code></pre>
 
 <p>Type representing an abstract vertex map.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/maps/edgemap.jl#L1-L5' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/maps/edgemap.jl#L1-L5' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.ConstEdgeMap' href='#Erdos.ConstEdgeMap'>#</a>
 <strong><code>Erdos.ConstEdgeMap</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>immutable ConstEdgeMap{T} &lt;: SimpleEdgeMap{T}
@@ -232,7 +232,7 @@ end
 </code></pre>
 
 <p>A type representing a constant vector map. Any attempt to change the internal value, e.g. <code>emap[u,v] = 4</code>, will fail silently.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/maps/edgemap.jl#L87-L95' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/maps/edgemap.jl#L87-L95' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.EdgeMap' href='#Erdos.EdgeMap'>#</a>
 <strong><code>Erdos.EdgeMap</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>type EdgeMap{E,T,D} &lt;: AEdgeMap{E,T}
@@ -243,24 +243,24 @@ end
 </code></pre>
 
 <p>Type implementing an edge map. The underlying container <code>data</code> can be a <code>Dict</code> or an <code>AbstractMatrix</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/maps/edgemap.jl#L10-L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/maps/edgemap.jl#L10-L19' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.EdgeMap-Tuple{Union{Erdos.ADiGraph,Erdos.AGraph},Type{T}}' href='#Erdos.EdgeMap-Tuple{Union{Erdos.ADiGraph,Erdos.AGraph},Type{T}}'>#</a>
 <strong><code>Erdos.EdgeMap</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>EdgeMap{T}(g, ::Type{T})
 </code></pre>
 
 <p>Returns a map that associates values of type <code>T</code> to the vertices of  graph <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/maps/edgemap.jl#L30-L35' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/maps/edgemap.jl#L30-L35' class='documenter-source'>source</a><br></p>
 <p><a id='Vertex-Maps-1'></a></p>
 <h2 id="vertex-maps">Vertex Maps</h2>
 <p>Any <code>AbstractVector{T}</code> or <code>Dict{Int,T}</code> can be used as a vertex map.</p>
 <p><a id='Erdos.AVertexMap' href='#Erdos.AVertexMap'>#</a>
 <strong><code>Erdos.AVertexMap</code></strong> &mdash; <em>Constant</em>.</p>
-<pre><code>typealias AVertexMap{V,T} Union{AbstractVector{T}, Dict{V,T}}
+<pre><code>@compat const AVertexMap{V,T} = Union{AbstractVector{T}, Dict{V,T}}
 </code></pre>
 
 <p>Type representing an abstract vertex map.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/maps/vertexmap.jl#L1-L5' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/maps/vertexmap.jl#L1-L5' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.ConstVertexMap' href='#Erdos.ConstVertexMap'>#</a>
 <strong><code>Erdos.ConstVertexMap</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>immutable ConstVertexMap{T} &lt;: AbstractVector{T}
@@ -269,21 +269,21 @@ end
 </code></pre>
 
 <p>A type representing a constant vector map. Any attempt to change the internal value, e.g. <code>vm[1] = 4</code>, will fail silently.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/maps/vertexmap.jl#L27-L35' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/maps/vertexmap.jl#L27-L35' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.VertexMap-Tuple{Union{Erdos.ADiGraph,Erdos.AGraph},Type{T}}' href='#Erdos.VertexMap-Tuple{Union{Erdos.ADiGraph,Erdos.AGraph},Type{T}}'>#</a>
 <strong><code>Erdos.VertexMap</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>VertexMap{T}(g, ::Type{T})
 </code></pre>
 
 <p>Returns a map that associates values of type <code>T</code> to the vertices of  graph <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/maps/vertexmap.jl#L16-L21' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/maps/vertexmap.jl#L16-L21' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.hasindex-Tuple{AbstractArray{T,1},Integer}' href='#Erdos.hasindex-Tuple{AbstractArray{T,1},Integer}'>#</a>
 <strong><code>Erdos.hasindex</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hasindex(v, i::Integer)
 </code></pre>
 
 <p>Check if collection <code>v</code> is indexable by <code>i</code></p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/maps/vertexmap.jl#L8-L12' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/maps/vertexmap.jl#L8-L12' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>

@@ -217,7 +217,7 @@
 </code></pre>
 
 <p>The number of vertices in <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L24-L28' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L24-L28' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.ne' href='#Erdos.ne'>#</a>
 <strong><code>Erdos.ne</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>ne(g)
@@ -225,21 +225,21 @@
 
 <p>The number of edges in <code>g</code>.</p>
 <p>Time Complexity: O(1)</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L31-L37' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L31-L37' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.add_vertex!' href='#Erdos.add_vertex!'>#</a>
 <strong><code>Erdos.add_vertex!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>add_vertex!(g)
 </code></pre>
 
 <p>Add a new vertex to the graph <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L69-L73' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L69-L73' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.add_vertices!' href='#Erdos.add_vertices!'>#</a>
 <strong><code>Erdos.add_vertices!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>add_vertices!(g, n)
 </code></pre>
 
 <p>Add <code>n</code> new vertices to the graph <code>g</code>. Returns the final number of vertices.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L29-L34' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L29-L34' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.rem_vertex!' href='#Erdos.rem_vertex!'>#</a>
 <strong><code>Erdos.rem_vertex!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>rem_vertex!(g, v)
@@ -247,21 +247,21 @@
 
 <p>Remove the vertex <code>v</code> from graph <code>g</code>. It will change the label of the last vertex of the old graph to <code>v</code>.</p>
 <p>See also <a href="./#Erdos.rem_vertices!"><code>rem_vertices!</code></a></p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L331-L338' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L331-L338' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.pop_vertex!' href='#Erdos.pop_vertex!'>#</a>
 <strong><code>Erdos.pop_vertex!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>pop_vertex!(g)
 </code></pre>
 
 <p>Remove the last vertex of <code>g</code>. Equivalent to rem_vertex!(g, nv(g)).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L167-L171' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L167-L171' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.rem_vertices!' href='#Erdos.rem_vertices!'>#</a>
 <strong><code>Erdos.rem_vertices!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>rem_vertex!(g, vs)
 </code></pre>
 
 <p>Remove the vertices in <code>vs</code> from graph <code>g</code>. Returns a vector mapping the vertices in the new graph to the old ones.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L348-L354' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L348-L354' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.has_edge' href='#Erdos.has_edge'>#</a>
 <strong><code>Erdos.has_edge</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>has_edge(g, e)
@@ -269,28 +269,28 @@ has_edge(g, u, v)
 </code></pre>
 
 <p>Returns true if the graph <code>g</code> has an edge <code>e</code> (from <code>u</code> to <code>v</code>).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L220-L225' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L220-L225' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.src' href='#Erdos.src'>#</a>
 <strong><code>Erdos.src</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>src(e)
 </code></pre>
 
 <p>Returns the source of an edge.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L146-L150' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L146-L150' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.dst' href='#Erdos.dst'>#</a>
 <strong><code>Erdos.dst</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>dst(e)
 </code></pre>
 
 <p>Returns the destination of an edge.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L153-L157' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L153-L157' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.edge' href='#Erdos.edge'>#</a>
 <strong><code>Erdos.edge</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>edge(g, u, v)
 </code></pre>
 
 <p>Returns an edge from 'u' to 'v'. The edge doesn't necessarily exists in <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L96-L101' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L96-L101' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.add_edge!' href='#Erdos.add_edge!'>#</a>
 <strong><code>Erdos.add_edge!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>add_edge!(g, e)
@@ -302,7 +302,7 @@ has_edge(g, u, v)
 
 <p>Add to <code>g</code> an edge from <code>u</code> to <code>v</code>.</p>
 <p>Will return false if add fails (e.g., if vertices are not in the graph or the edge is already present) and true otherwise.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L40-L51' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L40-L51' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.unsafe_add_edge!' href='#Erdos.unsafe_add_edge!'>#</a>
 <strong><code>Erdos.unsafe_add_edge!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>unsafe_add_edge!(g, u, v)
@@ -311,14 +311,14 @@ has_edge(g, u, v)
 <p>Possibly faster and unsafer version of <a href="./#Erdos.add_edge!"><code>add_edge!</code></a>, which doesn't guarantee some graph invariant properties.</p>
 <p>For example, some graph types (e.g. <code>Graph</code>) assume sorted adjacency lists as members. In this case order is not preserved while inserting new edges, resulting in a faster construction of the graph. As a consequence though, some functions such <code>has_edge(g, u, v)</code> could give incorrect results.</p>
 <p>To restore the correct behaviour, call <a href="./#Erdos.rebuild!"><code>rebuild!</code></a>(g) after the last call to <code>unsafe_add_edge!</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L306-L319' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L306-L319' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.rebuild!' href='#Erdos.rebuild!'>#</a>
 <strong><code>Erdos.rebuild!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>rebuild!(g)
 </code></pre>
 
 <p>Check and restore the structure of <code>g</code>, which could be corrupted by the use of unsafe functions (e. g. <a href="./#Erdos.unsafe_add_edge!"><code>unsafe_add_edge!</code></a>)</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L323-L328' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L323-L328' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.rem_edge!' href='#Erdos.rem_edge!'>#</a>
 <strong><code>Erdos.rem_edge!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>rem_edge!(g, e)
@@ -330,28 +330,28 @@ has_edge(g, u, v)
 
 <p>Remove the edge from <code>u</code> to <code>v</code>.</p>
 <p>Returns false if edge removal fails (e.g., if the edge does not exist) and true otherwise.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L55-L65' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L55-L65' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.degree' href='#Erdos.degree'>#</a>
 <strong><code>Erdos.degree</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>degree(g, v)
 </code></pre>
 
 <p>Return the number of edges  from the vertex <code>v</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L81-L85' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L81-L85' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.in_degree' href='#Erdos.in_degree'>#</a>
 <strong><code>Erdos.in_degree</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>in_degree(g, v)
 </code></pre>
 
 <p>Returns the number of edges which start at vertex <code>v</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L67-L71' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L67-L71' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.out_degree' href='#Erdos.out_degree'>#</a>
 <strong><code>Erdos.out_degree</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>out_degree(g, v)
 </code></pre>
 
 <p>Returns the number of edges which end at vertex <code>v</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L74-L78' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L74-L78' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.neighbors' href='#Erdos.neighbors'>#</a>
 <strong><code>Erdos.neighbors</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>neighbors(g, v)
@@ -360,7 +360,7 @@ has_edge(g, u, v)
 <p>Returns a list of all neighbors from vertex <code>v</code> in <code>g</code>.</p>
 <p>For directed graph, this is equivalent to <a href="./#Erdos.out_neighbors"><code>out_neighbors</code></a>(g, v).</p>
 <p>NOTE: it may return a reference, not a copy. Do not modify result.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L92-L100' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L92-L100' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.in_neighbors' href='#Erdos.in_neighbors'>#</a>
 <strong><code>Erdos.in_neighbors</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>in_neighbors(g, v)
@@ -368,7 +368,7 @@ has_edge(g, u, v)
 
 <p>Returns an iterable to all neighbors connected to vertex <code>v</code> by an incoming edge.</p>
 <p>NOTE: it may return a reference, not a copy. Do not modify result.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L77-L83' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L77-L83' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.out_neighbors' href='#Erdos.out_neighbors'>#</a>
 <strong><code>Erdos.out_neighbors</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>out_neighbors(g::ASimpleGraph, v)
@@ -376,14 +376,14 @@ has_edge(g, u, v)
 
 <p>Returns an iterable to all neighbors connected to vertex <code>v</code> by an outgoing edge.</p>
 <p>NOTE: it may return a reference, not a copy. Do not modify result.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L87-L93' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L87-L93' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.all_neighbors' href='#Erdos.all_neighbors'>#</a>
 <strong><code>Erdos.all_neighbors</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>all_neighbors(g, v)
 </code></pre>
 
 <p>Iterates over all distinct in/out neighbors of vertex <code>v</code> in <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L104-L108' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L104-L108' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.edges' href='#Erdos.edges'>#</a>
 <strong><code>Erdos.edges</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>edges(g, v)
@@ -392,85 +392,85 @@ has_edge(g, u, v)
 <p>Returns an iterator to the edges in <code>g</code> coming from vertex <code>v</code>. <code>v == src(e)</code> for each returned edge <code>e</code>.</p>
 <p>It is equivalent to <a href="./#Erdos.out_edges"><code>out_edges</code></a>.</p>
 <p>For digraphs, use <a href="./#Erdos.all_edges"><code>all_edges</code></a> to iterate over both in and out edges.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L259-L269' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L259-L269' class='documenter-source'>source</a><br></p>
 <pre><code>edges(g)
 </code></pre>
 
 <p>Returns an iterator to the edges of a graph <code>g</code>. The returned iterator is invalidated by changes to <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/edgeiter.jl#L69-L74' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/edgeiter.jl#L69-L74' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.in_edges' href='#Erdos.in_edges'>#</a>
 <strong><code>Erdos.in_edges</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>in_edges(g, v)
 </code></pre>
 
 <p>Returns an iterator to the edges in <code>g</code> going to vertex <code>v</code>. <code>v == dst(e)</code> for each returned edge <code>e</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L243-L248' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L243-L248' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.out_edges' href='#Erdos.out_edges'>#</a>
 <strong><code>Erdos.out_edges</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>out_edges(g, v)
 </code></pre>
 
 <p>Returns an iterator to the edges in <code>g</code> coming from vertex <code>v</code>. <code>v == src(e)</code> for each returned edge <code>e</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L251-L256' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L251-L256' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.all_edges' href='#Erdos.all_edges'>#</a>
 <strong><code>Erdos.all_edges</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>all_edges(g, v)
 </code></pre>
 
 <p>Iterates over all in and out edges of vertex <code>v</code> in <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L272-L276' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L272-L276' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.swap_vertices!' href='#Erdos.swap_vertices!'>#</a>
 <strong><code>Erdos.swap_vertices!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>swap_vertices!(g, u, v)
 </code></pre>
 
 <p>Swap the labels of vertices <code>u</code> and <code>v</code> In the new graph all old neighbors of vertex <code>n</code> will be neighbors of <code>v</code> and viceversa.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L385-L391' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L385-L391' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.has_vertex' href='#Erdos.has_vertex'>#</a>
 <strong><code>Erdos.has_vertex</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>has_vertex(g, v)
 </code></pre>
 
 <p>Return true if <code>v</code> is a vertex of <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L43-L47' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L43-L47' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.is_directed' href='#Erdos.is_directed'>#</a>
 <strong><code>Erdos.is_directed</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>is_directed(g)
 </code></pre>
 
 <p>Check if <code>g</code> a graph with directed edges.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L57-L61' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L57-L61' class='documenter-source'>source</a><br></p>
 <p><a id='Base.reverse' href='#Base.reverse'>#</a>
 <strong><code>Base.reverse</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>reverse(e)
 </code></pre>
 
 <p>Returns an edge with swapped <code>src(e)</code> and <code>dst(e)</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L160-L164' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L160-L164' class='documenter-source'>source</a><br></p>
 <pre><code>reverse(g::ADiGraph)
 </code></pre>
 
 <p>Produces a graph where all edges are reversed from the original.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L281-L286' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L281-L286' class='documenter-source'>source</a><br></p>
 <pre><code>reverse(e::Edge)
 </code></pre>
 
 <p>Swap <code>e.src</code> and <code>e.dst</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/edge.jl#L52-L56' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/edge.jl#L52-L56' class='documenter-source'>source</a><br></p>
 <p><a id='Base.reverse!' href='#Base.reverse!'>#</a>
 <strong><code>Base.reverse!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>reverse!(g::DiGraph)
 </code></pre>
 
 <p>In-place reverse (modifies the original graph).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L295-L299' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L295-L299' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.is_ordered' href='#Erdos.is_ordered'>#</a>
 <strong><code>Erdos.is_ordered</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>is_ordered(e)
 </code></pre>
 
 <p>Returns  <code>src(e) &lt;= dst(e)</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/edge.jl#L4-L8' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/edge.jl#L4-L8' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.adjacency_list' href='#Erdos.adjacency_list'>#</a>
 <strong><code>Erdos.adjacency_list</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>adjacency_list(g::AGraph)
@@ -481,42 +481,42 @@ adjacency_list(g::ADiGraph, dir=:out)
 <p>For directed graphs a second optional argument can be specified (<code>:out</code> or <code>:in</code>). The neighbors in the returned adjacency list are considered accordingly as those related through outgoing or incoming edges.</p>
 <p>The elements of  <code>a[i]</code> have the same order as in the iterator <code>(out_/in_)neighbors(g,i)</code>.</p>
 <p><em>Attention</em>: For some graph types it returns a reference, not a copy, therefore the returned object should not be modified.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L8-L23' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L8-L23' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.clean_vertex!' href='#Erdos.clean_vertex!'>#</a>
 <strong><code>Erdos.clean_vertex!</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>clean_vertex!(g, v)
 </code></pre>
 
 <p>Remove all incident edges on vertex <code>v</code> in <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L124-L128' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L124-L128' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.density' href='#Erdos.density'>#</a>
 <strong><code>Erdos.density</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>density(g)
 </code></pre>
 
 <p>Density is defined as the ratio of the number of actual edges to the number of possible edges. This is $|v| |v-1|$ for directed graphs and $(|v| |v-1|) / 2$ for undirected graphs.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L114-L120' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L114-L120' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.vertices' href='#Erdos.vertices'>#</a>
 <strong><code>Erdos.vertices</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>vertices(g)
 </code></pre>
 
 <p>Returns an iterator to the vertices of a graph (i.e. 1:nv(g))</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/core.jl#L1-L5' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/core.jl#L1-L5' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.has_self_loops' href='#Erdos.has_self_loops'>#</a>
 <strong><code>Erdos.has_self_loops</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>has_self_loops(g)
 </code></pre>
 
 <p>Returns true if <code>g</code> has any self loops.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/misc.jl#L19-L23' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/misc.jl#L19-L23' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.num_self_loops' href='#Erdos.num_self_loops'>#</a>
 <strong><code>Erdos.num_self_loops</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>num_self_loops(g)
 </code></pre>
 
 <p>Returns the number of self loops in <code>g</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/misc.jl#L26-L30' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/misc.jl#L26-L30' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.is_graphical' href='#Erdos.is_graphical'>#</a>
 <strong><code>Erdos.is_graphical</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>is_graphical(degs::Vector{Int})
@@ -524,7 +524,7 @@ adjacency_list(g::ADiGraph, dir=:out)
 
 <p>Check whether the degree sequence <code>degs</code> is graphical, according to <a href="http://mathworld.wolfram.com/GraphicSequence.html">Erdös-Gallai condition</a>.</p>
 <p>Time complexity: O(length(degs)^2)</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/misc.jl#L1-L8' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/misc.jl#L1-L8' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.graph' href='#Erdos.graph'>#</a>
 <strong><code>Erdos.graph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>graph{G&lt;:AGraph}(n, edgelist::Vector{Tuple{Int,Int}},
@@ -532,7 +532,7 @@ adjacency_list(g::ADiGraph, dir=:out)
 </code></pre>
 
 <p>Build a graph with <code>n</code> vertices, type <code>G</code>, and given <code>edgelist</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/generators/smallgraphs.jl#L4-L9' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/generators/smallgraphs.jl#L4-L9' class='documenter-source'>source</a><br></p>
 <pre><code>graph(s::Symbol, G = Graph)
 </code></pre>
 
@@ -635,7 +635,7 @@ adjacency_list(g::ADiGraph, dir=:out)
 </tr>
 </tbody>
 </table>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/generators/smallgraphs.jl#L35-L65' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/generators/smallgraphs.jl#L35-L65' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.digraph' href='#Erdos.digraph'>#</a>
 <strong><code>Erdos.digraph</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>digraph{G&lt;:AGraph}(n, edgelist::Vector{Tuple{Int,Int}},
@@ -643,7 +643,7 @@ adjacency_list(g::ADiGraph, dir=:out)
 </code></pre>
 
 <p>Build a digraph with <code>n</code> vertices, type <code>G</code>, and given <code>edgelist</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/generators/smallgraphs.jl#L20-L25' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/generators/smallgraphs.jl#L20-L25' class='documenter-source'>source</a><br></p>
 <pre><code>digraph(s::Symbol, G = DiGraph)
 </code></pre>
 
@@ -662,7 +662,7 @@ adjacency_list(g::ADiGraph, dir=:out)
 </tr>
 </tbody>
 </table>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/generators/smallgraphs.jl#L98-L107' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/generators/smallgraphs.jl#L98-L107' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.edgetype' href='#Erdos.edgetype'>#</a>
 <strong><code>Erdos.edgetype</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>edgetype(g)
@@ -670,7 +670,7 @@ edgetype(G)
 </code></pre>
 
 <p>Returns the type of edges of graph <code>g</code> (or graph type <code>G</code>), i. e. the element type returned of the iterator <code>edges(g)</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L105-L111' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L105-L111' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.vertextype' href='#Erdos.vertextype'>#</a>
 <strong><code>Erdos.vertextype</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>vertextype(g)
@@ -678,21 +678,21 @@ vertextype(G)
 </code></pre>
 
 <p>Returns the integer type of vertices of graph <code>g</code> (or graph type <code>G</code>).</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L115-L120' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L115-L120' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.graphtype' href='#Erdos.graphtype'>#</a>
 <strong><code>Erdos.graphtype</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>graphtype{G&lt;:ASimpleGraph}(::Type{G})
 </code></pre>
 
 <p>The graph type corresponding to <code>G</code>. If <code>G&lt;:AGraph</code> returns <code>G</code>, if <code>G&lt;:ADiGraph</code> returns a type <code>H&lt;:AGraph</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L123-L128' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L123-L128' class='documenter-source'>source</a><br></p>
 <p><a id='Erdos.digraphtype' href='#Erdos.digraphtype'>#</a>
 <strong><code>Erdos.digraphtype</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>digraphtype{G&lt;:ASimpleGraph}(::Type{G})
 </code></pre>
 
 <p>The digraph type corresponding to <code>G</code>. If <code>G&lt;:ADiGraph</code> returns <code>G</code>, if <code>G&lt;:AGraph</code> returns a type <code>H&lt;:ADiGraph</code>.</p>
-<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/66e6f1999dd8bd1a8b314ef10b82c9029c20289d/docs/../src/core/interface.jl#L131-L136' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/CarloLucibello/Erdos.jl/tree/9ffeccc189a08d8b21d7bb8b15b19bdd2118dd1f/docs/../src/core/interface.jl#L131-L136' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
